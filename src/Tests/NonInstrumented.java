@@ -1,8 +1,7 @@
-package AppiumSuite;
+package Tests;
 
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.android.AndroidElement;
-import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.IOSMobileCapabilityType;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -13,7 +12,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -22,9 +20,9 @@ import java.util.concurrent.TimeUnit;
 public class NonInstrumented extends BaseTest {
 
 
-    public NonInstrumented(String deviceID, DesiredCapabilities generalDC, String url) {
+    public NonInstrumented(String deviceID, DesiredCapabilities generalDC, String url,int iteration) {
 
-        super("NonInstrumented", deviceID, url);
+        super("NonInstrumented", deviceID, url, iteration);
         DesiredCapabilities dc = createCapabilities(generalDC);
         try {
             CreateDriver(dc);

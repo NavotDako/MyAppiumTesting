@@ -1,42 +1,32 @@
-package AppiumSuite;
+package Tests;
 
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidKeyCode;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
+import io.appium.java_client.remote.MobileBrowserType;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Capabilities;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.net.MalformedURLException;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 /**
  * Created by amit.licht on 05/24/2017.
  */
-public class WebTest extends AppiumSuite.BaseTest {
+public class WebTest extends BaseTest {
 
-    public WebTest(String deviceEntry, DesiredCapabilities generalDC, String url) {
-        super("WebTest", deviceEntry, url);
+    public WebTest(String deviceEntry, DesiredCapabilities generalDC, String url, int i) {
+        super("WebTest", deviceEntry, url,i);
         DesiredCapabilities dc = createCapabilities(generalDC);
-        try {
-            CreateDriver(dc);
-        } catch (MalformedURLException e) {
-            System.out.println("--------------------------------------------------------------------------");
-            System.out.println(e.getMessage()+" - " + deviceEntry);
-            System.out.println("--------------------------------------------------------------------------");
-            e.printStackTrace();
+        if (init(dc)) {
+            executeTest();
         }
-        executeTest();
     }
 
     public DesiredCapabilities createCapabilities(DesiredCapabilities dc) {
         DesiredCapabilities tempDC = dc;
-        if (deviceOS.contains("android")) tempDC.setCapability(AndroidMobileCapabilityType.BROWSER_NAME, "Chrome");
-        else tempDC.setCapability(AndroidMobileCapabilityType.BROWSER_NAME, "Safari");
+        if (deviceOS.contains("android")) tempDC.setBrowserName(MobileBrowserType.CHROMIUM);
+        else tempDC.setBrowserName(MobileBrowserType.SAFARI);
         return tempDC;
     }
 
@@ -47,20 +37,12 @@ public class WebTest extends AppiumSuite.BaseTest {
         System.out.println("page title: " + driver.getTitle());
         driver.findElement(By.xpath("//*[@id='lst-ib']")).sendKeys("appium tutorial");
         driver.findElementByXPath("//*[@name='btnG']").click();
-
         Map<String, String> sites = getSites();
-        String homeIdentifier = "//*[@class='android.widget.TextView']";
-
         for (Map.Entry site : sites.entrySet()) {
             driver.get("http://" + site.getKey());
-            driver.findElement(By.xpath((String) site.getValue()));
-//            ((AndroidDriver) driver).pressKeyCode(AndroidKeyCode.HOME);
-//            driver.context("native_app");
-//            // System.out.println(driver.getPageSource());
-//            driver.findElement(By.xpath(homeIdentifier));
+            new WebDriverWait(driver, 20).until(ExpectedConditions.presenceOfElementLocated(By.xpath((String) site.getValue())));
         }
 
-        driver.closeApp();
     }
 
     @Override
@@ -75,12 +57,7 @@ public class WebTest extends AppiumSuite.BaseTest {
         for (Map.Entry site : sites.entrySet()) {
             driver.get("http://" + site.getKey());
             new WebDriverWait(driver, 20).until(ExpectedConditions.presenceOfElementLocated(By.xpath((String) site.getValue())));
-
-           // driver.findElement(By.xpath());
-//
         }
-
-        driver.closeApp();
     }
 
     private Map<String, String> getSites() {

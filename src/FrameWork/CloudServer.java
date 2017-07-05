@@ -10,7 +10,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -40,6 +39,11 @@ public class CloudServer {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        System.out.println("Cloud Details:\n" + this.toString());
+    }
+
+    public String toString() {
+        return (String.format("%-20s\n%-10s\n%-20s\n", "HOST - " + HOST, "PORT - " + PORT, "USER - " + USER));
     }
 
     public void init() throws IOException {
@@ -118,8 +122,8 @@ public class CloudServer {
         return deviceOS;
     }
 
-    public List<String> getAllAvailableDevices() throws IOException {
-        List<String> devicesList = getAvailableDevicesMap(result);
+    public List<String> getAllAvailableDevices(String os) throws IOException {
+        List<String> devicesList = getAvailableDevicesList(result, os);
         return devicesList;
     }
 
@@ -169,12 +173,12 @@ public class CloudServer {
         }
     }
 
-    private List<String> getAvailableDevicesMap(String result) {
+    private List<String> getAvailableDevicesList(String result, String os) {
         List<String> tempDevicesList = new ArrayList<>();
         JSONObject jsonObject = new JSONObject(result);
         Map obj = jsonObject.toMap();
         List<Object> data = (List<Object>) obj.get("data");
-        Object[] devicesArray = GetFilteredDevices(data);
+        Object[] devicesArray = GetFilteredDevices(data, os);
 
         for (int i = 0; i < devicesArray.length; i++) {
             String[] devicePropertiesArray = devicesArray[i].toString().replace("{", "").replace("]", "").split(",");
@@ -192,13 +196,14 @@ public class CloudServer {
             }
             tempDevicesList.add(udid);
         }
-        System.out.println(tempDevicesList.toString());
+
+        System.out.println("DevicesList size - "+tempDevicesList.size()+" - "+tempDevicesList.toString());
         return tempDevicesList;
     }
 
-    private Object[] GetFilteredDevices(List<Object> data) {
+    private Object[] GetFilteredDevices(List<Object> data, String os) {
         Object[] devicesArray = new Object[0];
-        switch (Runner.USED_OS.toLowerCase()) {
+        switch (os) {
             case "android": {
                 devicesArray = data
                         .stream()

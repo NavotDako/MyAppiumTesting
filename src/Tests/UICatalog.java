@@ -1,23 +1,15 @@
-package AppiumSuite;
+package Tests;
 
-import java.net.MalformedURLException;
-import java.net.URL;
-
-import io.appium.java_client.ios.IOSDriver;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import io.appium.java_client.TouchAction;
-import io.appium.java_client.android.AndroidDriver;
 
 public class UICatalog extends BaseTest {
 
-    UICatalog(String testName, String deviceID, String url) {
-        super(testName, deviceID, url);
+    UICatalog(String testName, String deviceID, String url,int iteration) {
+        super(testName, deviceID, url, iteration);
     }
 
     @Override

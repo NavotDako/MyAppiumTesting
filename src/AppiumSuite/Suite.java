@@ -1,7 +1,10 @@
-package FrameWork;
+package AppiumSuite;
 
-import AppiumSuite.EriBankTest;
-import AppiumSuite.WebTest;
+import Tests.EriBankTest;
+import Tests.NonInstrumented;
+import Tests.Reboot;
+import Tests.WebTest;
+import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.IOException;
@@ -17,12 +20,13 @@ public class Suite implements Runnable {
     public Suite(String deviceID, String url) throws IOException {
         this.url = url;
         this.deviceID = deviceID;
-        dc.setCapability("udid", deviceID);
-        dc.setCapability("deviceName", Runner.cloudServer.getDeviceNameByUDID(this.deviceID));
         dc.setCapability("reportDirectory", Runner.reportFolderString);
         dc.setCapability("reportFormat", "xml");
-        dc.setCapability("stream", Runner.STREAM_NAME);
+        dc.setCapability("build", Runner.BUILD_NUM);
+        dc.setCapability("deviceName", deviceID);
+        dc.setCapability(MobileCapabilityType.UDID, deviceID);
         if (Runner.GRID) {
+            dc.setCapability("deviceName", Runner.cloudServer.getDeviceNameByUDID(this.deviceID));
             dc.setCapability("user", Runner.cloudServer.USER);
             dc.setCapability("password", Runner.cloudServer.PASS);
         }
@@ -30,9 +34,16 @@ public class Suite implements Runnable {
 
     public void run() {
         System.out.println("Starting Suite For - " + deviceID);
+        //new Reboot(deviceID, new DesiredCapabilities(this.dc), url);
         for (int i = 0; i < Runner.REP_NUM; i++) {
-//            new EriBankTest(deviceID, new DesiredCapabilities(this.dc), url);
-            new WebTest(deviceID, new DesiredCapabilities(this.dc), url);
+            new EriBankTest(deviceID, new DesiredCapabilities(this.dc), url,i+1);
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            //   new WebTest(deviceID, new DesiredCapabilities(this.dc), url,i+1);
+
 //            new NonInstrumented(deviceID, new DesiredCapabilities(this.dc),url);
         }
     }

@@ -1,4 +1,4 @@
-package AppiumSuite;
+package Tests;
 
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.IOSMobileCapabilityType;
@@ -11,18 +11,16 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
 public class EriBankTest extends BaseTest {
 
-    public EriBankTest(String deviceID, DesiredCapabilities generalDC, String url) {
-        super("EriBank", deviceID, url);
+    public EriBankTest(String deviceID, DesiredCapabilities generalDC, String url, int iteration) {
+        super("EriBank", deviceID, url, iteration);
         DesiredCapabilities dc = createCapabilities(generalDC);
         if (init(dc)) {
             executeTest();
         }
-
     }
 
 
@@ -77,7 +75,7 @@ public class EriBankTest extends BaseTest {
                 driver.findElement(By.xpath("xpath=//*[@text='Send Payment' and @onScreen='true']"));
                 flag = true;
             } catch (Exception e) {
-                driver.swipe(500, 1000, 500, 200, 1000);
+                driver.swipe(500, 600, 500, 200, 1000);
                 if (System.currentTimeMillis() > (loopStartTime + 30000)) {
                     flag = true;
                 }
