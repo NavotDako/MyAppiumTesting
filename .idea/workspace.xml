@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="87cd48be-74e7-42a2-9291-0fed6077d338" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Misc/spiral.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Misc/play2.java" afterPath="$PROJECT_DIR$/src/Misc/baseSwitch.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/build.txt" afterPath="$PROJECT_DIR$/lib/build.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppiumSuite/Runner.java" afterPath="$PROJECT_DIR$/src/AppiumSuite/Runner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppiumSuite/Suite.java" afterPath="$PROJECT_DIR$/src/AppiumSuite/Suite.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FrameWork/CloudServer.java" afterPath="$PROJECT_DIR$/src/FrameWork/CloudServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FrameWork/NewIOSDriver.java" afterPath="$PROJECT_DIR$/src/FrameWork/NewIOSDriver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SingleTest/SingleAndroidTest.java" afterPath="$PROJECT_DIR$/src/SingleTest/SingleAndroidTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SingleTest/SingleIOSTest.java" afterPath="$PROJECT_DIR$/src/SingleTest/SingleIOSTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SingleTest/iOSTest.java" afterPath="$PROJECT_DIR$/src/SingleTest/iOSTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tests/BaseTest.java" afterPath="$PROJECT_DIR$/src/Tests/BaseTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tests/Reboot.java" afterPath="$PROJECT_DIR$/src/Tests/Reboot.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tests/WebTest.java" afterPath="$PROJECT_DIR$/src/Tests/WebTest.java" />
-    </list>
+    <list default="true" id="87cd48be-74e7-42a2-9291-0fed6077d338" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -909,7 +894,13 @@
       <option name="project" value="LOCAL" />
       <updated>1499266248605</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="expended chrome test">
+      <created>1500452502416</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1500452502416</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1347,6 +1338,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
           <caret line="327" column="15" selection-start-line="327" selection-start-column="15" selection-end-line="327" selection-end-column="15" />
+          <folding>
+            <element signature="e#11985#11986#0" expanded="false" />
+            <element signature="e#12016#12017#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1361,6 +1356,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.65194803">
           <caret line="61" column="19" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
+          <folding>
+            <element signature="method#main#0;class#spiral#0" expanded="false" />
+            <element signature="method#createMatrix#0;class#spiral#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
