@@ -46,26 +46,25 @@ public class SingleAndroidTest {
     }
 
     private AndroidDriver CreateDriver(DesiredCapabilities dc) throws MalformedURLException {
-        String URL = null;
-        if (GRID) URL = cloudServer.gridURL;
-        AndroidDriver driver = getAndroidDriver(dc, URL);
+        AndroidDriver driver = getAndroidDriver(dc);
         return driver;
     }
 
-    private AndroidDriver getAndroidDriver(DesiredCapabilities dc, String cloudURL) throws MalformedURLException {
+    private AndroidDriver getAndroidDriver(DesiredCapabilities dc) throws MalformedURLException {
         AndroidDriver driver;
-        if (!GRID) {
-            driver = new NewAndroidDriver(new URL("http://localhost:4723/wd/hub"), dc);
-
+        if (GRID) {
+            driver = new NewAndroidDriver(new URL(cloudServer.gridURL), dc);
         } else {
-            driver = new NewAndroidDriver(new URL(cloudURL), dc);
+            driver = new NewAndroidDriver(new URL("http://localhost:4723/wd/hub"), dc);
         }
         return driver;
     }
 
     @Test
     public void testUntitled() {
-        driver.executeScript("client:client.reboot(150000)");
+        for (int i = 0; i < 5; i++) {
+            driver.get("https://www.google.co.il/search?q=" + i + "&aqs=chrome..69i57j69i60l4j69i65.1376j0j4&sourceid=chrome&ie=UTF-8");
+        }
     }
 
     @After

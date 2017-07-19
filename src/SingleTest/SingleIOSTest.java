@@ -19,17 +19,18 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Date;
 
 public class SingleIOSTest {
 
     protected AppiumDriver driver = null;
     CloudServer cloudServer;
-    private boolean GRID = false;
+    private boolean GRID = true;
 
     @Before
     public void setUp() throws IOException {
 
-        driver = CreateDriver(getDesiredCapabilities("636cb7a36d429661e6be6d70e1447a66268f73ff"));
+        driver = CreateDriver(getDesiredCapabilities("1cbc20b1088c65f4a27dca70b158843f69f249a64"));
     }
 
     private DesiredCapabilities getDesiredCapabilities(String udid) throws IOException {
@@ -46,30 +47,28 @@ public class SingleIOSTest {
     }
 
     private IOSDriver CreateDriver(DesiredCapabilities dc) throws MalformedURLException {
-        String URL = null;
-        if (GRID) URL = cloudServer.gridURL;
-        IOSDriver driver = (IOSDriver) getDriver(dc, URL);
+        IOSDriver driver = (IOSDriver) getDriver(dc);
         return driver;
     }
 
-    private AppiumDriver getDriver(DesiredCapabilities dc, String cloudURL) throws MalformedURLException {
+    private AppiumDriver getDriver(DesiredCapabilities dc) throws MalformedURLException {
         AppiumDriver driver;
-        if (!GRID) {
-            driver = new NewIOSDriver(new URL("http://localhost:4723/wd/hub"), dc);
+        if (GRID) {
+            driver = new NewIOSDriver(new URL(cloudServer.gridURL), dc);
+//            driver = new NewIOSDriver(new URL("https://192.168.2.135:443/wd/hub"), dc);
+//            driver = new NewIOSDriver(new URL("https://qacloud.experitest.com:443/wd/hub"), dc);
 
         } else {
-            driver = new NewIOSDriver(new URL(cloudURL), dc);
+            driver = new NewIOSDriver(new URL("http://localhost:4723/wd/hub"), dc);
         }
         return driver;
     }
 
     @Test
     public void testUntitled() {
-        Object result1 = driver.executeScript("client:client.launch(\"com.apple.calculator\", \"true\", \"true\")");
-        WebElement el = driver.findElement(By.xpath("//*[@text='8']"));
-
-        Object result3 = driver.executeScript("client:client.click(\"NATIVE\", \"xpath=//*[@text='8']\", \"0\", \"3\")");
-        System.out.println("");
+        for (int i = 0; i < 5; i++) {
+            driver.get("https://www.google.co.il/search?q=" + i + "&aqs=chrome..69i57j69i60l4j69i65.1376j0j4&sourceid=chrome&ie=UTF-8");
+        }
     }
 
     @After

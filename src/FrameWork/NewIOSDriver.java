@@ -14,19 +14,19 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class NewIOSDriver extends IOSDriver {
-    private String deviceID=null;
-    private String deviceName=null;
+    private String deviceID = null;
+    private String deviceName = null;
 
     SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
 
     public NewIOSDriver(URL remoteAddress, Capabilities desiredCapabilities) {
         super(remoteAddress, desiredCapabilities);
-        if (Runner.GRID) System.out.println(this.getCapabilities().getCapability("cloudViewLink"));
-        try{
-        this.deviceID = (String) desiredCapabilities.getCapability("udid");
-        this.deviceName = ((String) desiredCapabilities.getCapability("deviceName")).replace(" ","_").replace("'","-").trim();
+//        if (Runner.GRID) System.out.println(this.getCapabilities().getCapability("cloudViewLink"));
+        try {
+            this.deviceID = (String) desiredCapabilities.getCapability("udid");
+            this.deviceName = ((String) desiredCapabilities.getCapability("deviceName")).replace(" ", "_").replace("'", "-").trim();
 
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println("No Id or Name");
         }
 
@@ -39,7 +39,8 @@ public class NewIOSDriver extends IOSDriver {
         super.log(sessionId, commandName, toLog, when);
         if (deviceName != null) {
             Utils.writeToDeviceLog(deviceName, sdf.format(new Date(System.currentTimeMillis())) + when + ": " + commandName + " toLog:" + toLog);
-        }    }
+        }
+    }
 
 
 }

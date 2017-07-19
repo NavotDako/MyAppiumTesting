@@ -116,11 +116,7 @@ public abstract class BaseTest {
         System.out.println("THE TEST HAD FAILED *** - " + testName + " For Device - " + deviceName + "_" + deviceID);
         System.out.println("--------------------------------------------------------------------------");
         e.printStackTrace();
-//        try {
-//            if (!Runner.GRID) Utils.screenshot(driver,"screen");
-//        } catch (IOException e1) {
-//            e1.printStackTrace();
-//        }
+
     }
 
     private void reportSuccess() {

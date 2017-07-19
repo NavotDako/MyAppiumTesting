@@ -44,8 +44,8 @@ public class iOSTest implements Runnable {
 
     public void setUp() throws MalformedURLException {
         DesiredCapabilities dc = new DesiredCapabilities();
-        dc.setCapability("user", "zekra");
-        dc.setCapability("password", "Zekra123");
+        dc.setCapability("user", "waseem.suleiman");
+        dc.setCapability("password", "Experitest2013");
         dc.setCapability("testName", testName);
         dc.setCapability("build", build);
         try {
@@ -64,7 +64,7 @@ public class iOSTest implements Runnable {
     private static String getURL() {
 
         if (SingleTestRunner.GRID) {
-            return SingleTestRunner.cloudServer.gridURL;
+            return "https://cloud.experitest.com";//SingleTestRunner.cloudServer.gridURL;
         } else {
             return "http://localhost:4723/wd/hub/";
         }

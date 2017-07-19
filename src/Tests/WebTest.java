@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 public class WebTest extends BaseTest {
 
     public WebTest(String deviceEntry, DesiredCapabilities generalDC, String url, int i) {
-        super("WebTest", deviceEntry, url,i);
+        super("WebTest", deviceEntry, url, i);
         DesiredCapabilities dc = createCapabilities(generalDC);
         if (init(dc)) {
             executeTest();
@@ -32,50 +32,63 @@ public class WebTest extends BaseTest {
 
     @Override
     protected void androidTest() throws Exception {
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get("http://google.com");
-        System.out.println("page title: " + driver.getTitle());
-        driver.findElement(By.xpath("//*[@id='lst-ib']")).sendKeys("appium tutorial");
-        driver.findElementByXPath("//*[@name='btnG']").click();
+
         Map<String, String> sites = getSites();
         for (Map.Entry site : sites.entrySet()) {
-            driver.get("http://" + site.getKey());
-            new WebDriverWait(driver, 20).until(ExpectedConditions.presenceOfElementLocated(By.xpath((String) site.getValue())));
+            boolean failed = false;
+            try {
+                driver.get("http://" + site.getKey());
+                new WebDriverWait(driver, 20).until(ExpectedConditions.presenceOfElementLocated(By.xpath((String) site.getValue())));
+
+            } catch (Exception e) {
+                driver.navigate().refresh();
+                failed = true;
+            }
+            if (failed) {
+                driver.get("http://" + site.getKey());
+                new WebDriverWait(driver, 20).until(ExpectedConditions.presenceOfElementLocated(By.xpath((String) site.getValue())));
+            }
         }
 
     }
 
     @Override
     protected void iosTest() throws Exception {
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get("http://google.com");
-        System.out.println("page title: " + driver.getTitle());
-        driver.findElement(By.xpath("//*[@id='lst-ib']")).sendKeys("appium tutorial");
-        driver.findElementByXPath("//*[@name='btnG']").click();
 
         Map<String, String> sites = getSites();
         for (Map.Entry site : sites.entrySet()) {
-            driver.get("http://" + site.getKey());
-            new WebDriverWait(driver, 20).until(ExpectedConditions.presenceOfElementLocated(By.xpath((String) site.getValue())));
+            boolean failed = false;
+            try {
+                driver.get("http://" + site.getKey());
+                new WebDriverWait(driver, 20).until(ExpectedConditions.presenceOfElementLocated(By.xpath((String) site.getValue())));
+
+            } catch (Exception e) {
+                driver.navigate().refresh();
+                failed = true;
+            }
+            if (failed) {
+                driver.get("http://" + site.getKey());
+                new WebDriverWait(driver, 20).until(ExpectedConditions.presenceOfElementLocated(By.xpath((String) site.getValue())));
+            }
         }
     }
 
     private Map<String, String> getSites() {
         Map<String, String> sitesMap = new HashMap<>();
-        sitesMap.put("www.bbc.com", "//*[@alt='BBC']");
+        //sitesMap.put("www.bbc.com", "//*[@alt='BBC']");
         sitesMap.put("www.google.com", "//*[@id='hplogo']");
         sitesMap.put("www.amazon.com", "//*[@class='nav-logo-base nav-sprite']");
         sitesMap.put("www.apple.com", "//*[@id='ac-gn-firstfocus-small' or @id='ac-gn-firstfocus']");
-        sitesMap.put("www.facebook.com", "xpath=//*[@id='header' or @class='clearfix loggedout_menubar']");
-        sitesMap.put("www.wikipedia.org", "xpath=//*[@alt='WikipediA']");
-        sitesMap.put("www.instagram.com", "xpath=//*[@class='_du7bh _soakw coreSpriteLoggedOutWordmark']");
-        sitesMap.put("www.reddit.com", "xpath=//*[@class='TopNav-text-vcentering']");
-        sitesMap.put("www.linkedin.com", "xpath=//*[@alt='LinkedIn' and @class='lazy-loaded']");
-        sitesMap.put("www.netflix.com", "xpath=//*[@nodeName='svg']");
-        sitesMap.put("www.stackoverflow.com", "xpath=//*[@class='topbar-icon js-site-switcher-button icon-site-switcher-bubble' or @text='Stack Overflow']");
-        sitesMap.put("www.imdb.com", "xpath=//*[@class='navbar-link' or @text='IMDb']");
-        sitesMap.put("www.paypal.com", "xpath=//*[@text='PayPal' and @class='paypal-img-logo']");
-        sitesMap.put("www.dropbox.com", "xpath=//*[@class='dropbox-logo__type' or @alt='Dropbox']");
+        sitesMap.put("www.facebook.com", "//*[@id='header' or @class='clearfix loggedout_menubar']");
+        sitesMap.put("www.wikipedia.org", "//*[@alt='WikipediA']");
+        sitesMap.put("www.instagram.com", "//*[@class='_du7bh _soakw coreSpriteLoggedOutWordmark']");
+        sitesMap.put("www.reddit.com", "//*[@class='TopNav-text-vcentering']");
+        sitesMap.put("www.linkedin.com", "//*[@alt='LinkedIn' and @class='lazy-loaded']");
+        sitesMap.put("www.stackoverflow.com", "//*[@class='topbar-icon js-site-switcher-button icon-site-switcher-bubble' or @text='Stack Overflow']");
+        sitesMap.put("www.imdb.com", "//*[@class='navbar-link' or @text='IMDb']");
+        sitesMap.put("www.paypal.com", "//*[@text='PayPal' and @class='paypal-img-logo']");
+//        sitesMap.put("www.netflix.com", "//*[@nodeName='svg']");
+//        sitesMap.put("www.dropbox.com", "//*[@class='dropbox-logo__type' or @alt='Dropbox']");
 //        sitesMap.put("www.yahoo.com", "xpath=//*[@id='yucs-logo-img']");
 //        sitesMap.put("www.cnn.com", "//*[@id='logo']");
 //        sitesMap.put("www.youtube.com", "xpath=//*[@class='_moec _mvgc']");

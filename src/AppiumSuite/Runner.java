@@ -13,7 +13,7 @@ import java.util.concurrent.Future;
 public class Runner {
     static String reportFolderString = "c:\\temp\\AppiumReports";
     public static int index = 1;
-    static int REP_NUM = 3;
+    static int REP_NUM = 300;
     public static boolean GRID = true;
     private static boolean ALL_DEVICES = true;
     public static String USED_OS = "all"; //android//ios//all
@@ -22,6 +22,7 @@ public class Runner {
 
     public static CloudServer cloudServer;
     public static String BUILD_NUM;
+    public static boolean SLEEP = true;
 
     public static void main(String[] args) throws IOException {
         PrepareReportsFolders();
@@ -90,19 +91,19 @@ public class Runner {
             if (ALL_DEVICES) {
                 devicesList = cloudServer.getAllAvailableDevices(USED_OS.toLowerCase());
             } else {
-                devicesList.add("36f0a41a8fca9263c1f977b915dcb5668a0b83fc");
-                devicesList.add("30ea1939099b89ebf97cbd3422770af6dc5ee295");
-                devicesList.add("FA69J0308869");
-                devicesList.add("1c1bf697");
-                devicesList.add("HT51HWV00455");
-                devicesList.add("0a6878f8");
-                devicesList.add("636cb7a36d429661e6be6d70e1447a66268f73ff");
-                devicesList.add("3230d293cf7611a3");
-                devicesList.add("LGH85046996304");
-                devicesList.add("b5e53830a00a854f3c820869a3feb2f38b4fc7d8");
+                devicesList.add("a5f7b2da06f20f32d0cecc1867550144f785d738");
+//                devicesList.add("30ea1939099b89ebf97cbd3422770af6dc5ee295");
+//                devicesList.add("FA69J0308869");
+//                devicesList.add("1c1bf697");
+//                devicesList.add("HT51HWV00455");
+//                devicesList.add("0a6878f8");
+//                devicesList.add("636cb7a36d429661e6be6d70e1447a66268f73ff");
+//                devicesList.add("3230d293cf7611a3");
+//                devicesList.add("LGH85046996304");
+//                devicesList.add("b5e53830a00a854f3c820869a3feb2f38b4fc7d8");
             }
         } else {
-            devicesList.add("FA69J0308869");
+            devicesList.add("2a7c8e0fd300585c6b563cdd39e6943a72a2edfa");
         }
         System.out.println("Device List Size - " + devicesList.size());
         return devicesList;

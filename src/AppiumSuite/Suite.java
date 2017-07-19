@@ -9,6 +9,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.Random;
 
 public class Suite implements Runnable {
 
@@ -34,17 +35,26 @@ public class Suite implements Runnable {
 
     public void run() {
         System.out.println("Starting Suite For - " + deviceID);
-        //new Reboot(deviceID, new DesiredCapabilities(this.dc), url);
+      //  new Reboot(deviceID, new DesiredCapabilities(this.dc), url,1);
+
         for (int i = 0; i < Runner.REP_NUM; i++) {
-            new EriBankTest(deviceID, new DesiredCapabilities(this.dc), url,i+1);
-            try {
-                Thread.sleep(5000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            //   new WebTest(deviceID, new DesiredCapabilities(this.dc), url,i+1);
+           if (i != 0 && (Runner.SLEEP)) sleep();
+           new EriBankTest(deviceID, new DesiredCapabilities(this.dc), url, i + 1);
+           if (Runner.SLEEP) sleep();
+           new WebTest(deviceID, new DesiredCapabilities(this.dc), url, i + 1);
+//            if (Runner.SLEEP) sleep();
 
 //            new NonInstrumented(deviceID, new DesiredCapabilities(this.dc),url);
+        }
+    }
+
+    private void sleep() {
+        try {
+            int timeToSleep = ((new Random()).nextInt(100000)) + 20000;
+            System.out.println("device - " + deviceID + " is going to sleep for - " + timeToSleep + " milliseconds");
+            Thread.sleep(timeToSleep);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 }

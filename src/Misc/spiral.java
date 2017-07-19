@@ -3,7 +3,7 @@ package Misc;
 /**
  * Created by navot.dako on 7/4/2017.
  */
-public class play2 {
+public class spiral {
 
     private static int rightBound;
     private static int bottomBound;

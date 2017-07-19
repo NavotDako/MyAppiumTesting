@@ -25,12 +25,12 @@ public class Reboot extends BaseTest {
 
     @Override
     protected void androidTest() throws Exception {
-        driver.executeScript("client:client.reboot(150000)");
+        driver.executeScript("client:client.reboot(200000)");
     }
 
     @Override
     protected void iosTest() throws Exception {
-        driver.executeScript("client:client.reboot(150000)");
+        driver.executeScript("client:client.reboot(200000)");
     }
 
 
