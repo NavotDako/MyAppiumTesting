@@ -5,35 +5,59 @@
     <artifactId>client</artifactId>
     <version>1.0</version>
     <name>java-client</name>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.5.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
     <repositories>
-        <repository>
-            <id>someshit</id>
-            <url>https://mvnrepository.com/artifact/io.appium/java-client</url>
-        </repository>
-        <repository>
-            <id>someseconedshit</id>
-            <url>https://mvnrepository.com/artifact/junit/junit</url>
-        </repository>
         <repository>
             <id>someseconedshit2</id>
             <url>https://mvnrepository.com/artifact/org.json/json</url>
         </repository>
+
+        <repository>
+            <id>someshqqqqit</id>
+            <url>https://cloud.experitest.com/repo</url>
+        </repository>
+        <!--<repository>-->
+            <!--<id>someshqqqqit</id>-->
+            <!--<url>http://192.168.2.13/repo</url>-->
+        <!--</repository>-->
+
     </repositories>
     <dependencies>
-        <dependency>
-            <groupId>io.appium</groupId>
-            <artifactId>java-client</artifactId>
-            <version>4.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-        </dependency>
+        <!--<dependency>-->
+        <!--<groupId>io.appium</groupId>-->
+        <!--<artifactId>java-client</artifactId>-->
+        <!--<version>4.0.0</version>-->
+        <!--</dependency>-->
+
         <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
             <version>20170516</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.experitest</groupId>
+            <artifactId>appium</artifactId>
+            <version>4.1.2</version>
+
+        </dependency>
+
+        <!--<dependency>-->
+            <!--<groupId>com.experitest</groupId>-->
+            <!--<artifactId>seetest-client</artifactId>-->
+            <!--<version>11.0</version>-->
+        <!--</dependency>-->
     </dependencies>
 </project>

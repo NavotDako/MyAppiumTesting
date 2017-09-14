@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
@@ -26,6 +27,44 @@ public class CloudServer {
     private String authString;
     String result;
 
+    public static void main(String[] args) throws IOException {
+        System.out.println("Initiating The Cloud Object");
+
+        String HOST = "192.168.2.13";
+        String PORT = "80";
+        String USER = "admin";
+        String PASS = "Experitest2012";
+
+        String prefix = "http://";
+        String authString = USER + ":" + PASS;
+        String webPage = prefix + HOST + ":" + PORT + "/api/v1";
+        byte[] authEncBytes = Base64.encodeBase64(authString.getBytes());
+        String authStringEnc = new String(authEncBytes);
+        String DEVICES_URL = "/devices";
+        URL url = new URL(webPage + DEVICES_URL);
+        for (int i = 0; i < 10000; i++) {
+
+            URLConnection urlConnection = url.openConnection();
+            urlConnection.setRequestProperty("Authorization", "Basic " + authStringEnc);
+            InputStream is = urlConnection.getInputStream();
+            InputStreamReader isr = new InputStreamReader(is);
+            int numCharsRead;
+            char[] charArray = new char[1024];
+            StringBuffer sb = new StringBuffer();
+            while ((numCharsRead = isr.read(charArray)) > 0) {
+                sb.append(charArray, 0, numCharsRead);
+            }
+            String result = sb.toString();
+            if (((HttpURLConnection) urlConnection).getResponseCode() < 300) {
+                System.out.println(result);
+            } else {
+                throw new RuntimeException(result);
+            }
+
+            ((HttpURLConnection) urlConnection).disconnect();
+        }
+    }
+
     public CloudServer(CloudServerName cloudName) {
         System.out.println("Initiating The Cloud Object");
         this.cloudName = cloudName;
@@ -39,6 +78,11 @@ public class CloudServer {
         authStringEnc = new String(authEncBytes);
         System.out.println("Done Initiating The Cloud Object");
         System.out.println("Cloud Details:\n" + this.toString());
+        try {
+            result = doGet(DEVICES_URL);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public String toString() {
@@ -46,7 +90,7 @@ public class CloudServer {
     }
 
     public enum CloudServerName {
-        MY, QA, MIRRON, PUBLIC, ATT
+        MY, QA, MIRRON, PUBLIC, EYAl, QA_Not_Secured, MY_N_S,YEHUDA, ATT
     }
 
     public void updateCloudDetails() {
@@ -57,9 +101,27 @@ public class CloudServer {
                 USER = "admin";
                 PASS = "Experitest2012";
                 break;
+            case MY_N_S:
+                HOST = "192.168.2.13";
+                PORT = "8090";
+                USER = "admin";
+                PASS = "Experitest2012";
+                break;
+            case YEHUDA:
+                HOST = "192.168.2.31";
+                PORT = "1111";
+                USER = "yehuda";
+                PASS = "Experitest2012";
+                break;
             case QA:
                 HOST = "qacloud.experitest.com";
                 PORT = "443";
+                USER = "zekra";
+                PASS = "Zekra1234";
+                break;
+            case QA_Not_Secured:
+                HOST = "192.168.2.135";
+                PORT = "80";
                 USER = "zekra";
                 PASS = "Zekra1234";
                 break;
@@ -72,9 +134,16 @@ public class CloudServer {
             case PUBLIC:
                 HOST = "https://cloud.experitest.com";
                 PORT = "443";
-                USER = "zekra";
-                PASS = "Zekra1234";
+                USER = "dikla";
+                PASS = "Experitest2012";
                 break;
+            case EYAl:
+                HOST = "eyalneumann.experitest.local";
+                PORT = "8091";
+                USER = "admin";
+                PASS = "Experitest2012";
+                break;
+
             default:
                 HOST = "192.168.2.13";
                 PORT = "80";
@@ -85,7 +154,7 @@ public class CloudServer {
     }
 
     public List<String> getAllAvailableDevices(String os) throws IOException {
-        result = doGet(DEVICES_URL);
+
         List<String> devicesList = getAvailableDevicesList(result, os);
         return devicesList;
     }
@@ -197,7 +266,7 @@ public class CloudServer {
         return deviceOs;
     }
 
-    private String getDeviceName(String result, String deviceID) {
+    private String getDeviceName(String deviceID) {
         JSONObject jsonObject = new JSONObject(result);
         Map obj = jsonObject.toMap();
         List<Object> data = (List<Object>) obj.get("data");
@@ -224,7 +293,7 @@ public class CloudServer {
     }
 
     public String getDeviceNameByUDID(String deviceID) throws IOException {
-        String deviceOS = getDeviceName(result, deviceID);
+        String deviceOS = getDeviceName(deviceID);
         return deviceOS;
     }
 

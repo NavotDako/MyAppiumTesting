@@ -19,7 +19,6 @@ public class iOSTest implements Runnable {
     }
 
 
-    @Override
     public void run() {
         try {
             setUp();

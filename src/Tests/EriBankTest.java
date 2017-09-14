@@ -1,5 +1,7 @@
 package Tests;
 
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.IOSMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
@@ -11,6 +13,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class EriBankTest extends BaseTest {
@@ -26,8 +29,8 @@ public class EriBankTest extends BaseTest {
 
     public DesiredCapabilities createCapabilities(DesiredCapabilities dc) {
         if (deviceOS.contains("ios")) {
-            dc.setCapability(MobileCapabilityType.APP, "http://192.168.2.72:8181/iOSApps/EriBankO.ipa");
-            dc.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.experitest.ExperiBankO");
+            dc.setCapability(MobileCapabilityType.APP, "http://192.168.2.72:8181/iOSApps/EriBank.ipa");
+            dc.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.experitest.ExperiBank");
             dc.setCapability("instrumentApp", true);
         } else {
             dc.setCapability(MobileCapabilityType.APP, "http://192.168.2.72:8181/AndroidApps/eribank.apk");
@@ -36,6 +39,7 @@ public class EriBankTest extends BaseTest {
         }
         DesiredCapabilities tempDC = dc;
         tempDC.setCapability(MobileCapabilityType.NO_RESET, false);
+
 
         return tempDC;
     }

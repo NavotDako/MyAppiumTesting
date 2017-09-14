@@ -6,6 +6,7 @@ import FrameWork.NewIOSDriver;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.remote.IOSMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.remote.MobilePlatform;
 import org.junit.After;
@@ -30,7 +31,7 @@ public class SingleIOSTest {
     @Before
     public void setUp() throws IOException {
 
-        driver = CreateDriver(getDesiredCapabilities("1cbc20b1088c65f4a27dca70b158843f69f249a64"));
+        driver = CreateDriver(getDesiredCapabilities("a5f7b2da06f20f32d0cecc1867550144f785d738"));
     }
 
     private DesiredCapabilities getDesiredCapabilities(String udid) throws IOException {
@@ -41,8 +42,9 @@ public class SingleIOSTest {
             dc.setCapability("password", cloudServer.PASS);
         }
         dc.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.IOS);
-        dc.setCapability(MobileCapabilityType.UDID, udid);
-
+//        dc.setCapability(MobileCapabilityType.UDID, udid);
+//        dc.setCapability(MobileCapabilityType.APP, "http://192.168.2.72:8181/iOSApps/Eri22222Bank.ipa");
+//        dc.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.experitest.ExperiBank");
         return dc;
     }
 
@@ -55,8 +57,6 @@ public class SingleIOSTest {
         AppiumDriver driver;
         if (GRID) {
             driver = new NewIOSDriver(new URL(cloudServer.gridURL), dc);
-//            driver = new NewIOSDriver(new URL("https://192.168.2.135:443/wd/hub"), dc);
-//            driver = new NewIOSDriver(new URL("https://qacloud.experitest.com:443/wd/hub"), dc);
 
         } else {
             driver = new NewIOSDriver(new URL("http://localhost:4723/wd/hub"), dc);
@@ -66,9 +66,10 @@ public class SingleIOSTest {
 
     @Test
     public void testUntitled() {
-        for (int i = 0; i < 5; i++) {
-            driver.get("https://www.google.co.il/search?q=" + i + "&aqs=chrome..69i57j69i60l4j69i65.1376j0j4&sourceid=chrome&ie=UTF-8");
-        }
+       driver.get("http://www.ebay.com");
+        String str = (String) driver.executeScript("experitest:client.elementGetText(\"WEB\", \"//*[@id='gh-mlogo']\", \"0\")");
+        String b = driver.findElement(By.xpath("//*[@id='gh-mlogo']")).getText();
+        System.out.println(str + "                - "+b);
     }
 
     @After

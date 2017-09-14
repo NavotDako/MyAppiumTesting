@@ -24,23 +24,26 @@ public class SingleAndroidTest {
 
     protected AppiumDriver driver = null;
     CloudServer cloudServer;
-    private boolean GRID = false;
+    private boolean GRID = true;
 
     @Before
     public void setUp() throws IOException {
 
-        driver = CreateDriver(getDesiredCapabilities("ce051605686c683b03"));
+        driver = CreateDriver(getDesiredCapabilities("011ef446b34c250f"));
     }
 
     private DesiredCapabilities getDesiredCapabilities(String udid) throws IOException {
         DesiredCapabilities dc = new DesiredCapabilities();
         if (GRID) {
-            cloudServer = new CloudServer(CloudServer.CloudServerName.MY);
-            dc.setCapability("user", cloudServer.USER);
+            cloudServer = new CloudServer(CloudServer.CloudServerName.PUBLIC);
+            dc.setCapability("username", cloudServer.USER);
             dc.setCapability("password", cloudServer.PASS);
         }
-        dc.setCapability(MobileCapabilityType.PLATFORM_NAME, Platform.ANDROID);
-        dc.setCapability(MobileCapabilityType.UDID, udid);
+//        dc.setCapability(MobileCapabilityType.PLATFORM_NAME, Platform.ANDROID);
+//        dc.setCapability(MobileCapabilityType.APP, "http://192.168.2.72:8181/AndroidApps/eriban111k.apk");
+//        dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.experitest.ExperiBank");
+//        dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".LoginActivity");
+//        dc.setCapability(MobileCapabilityType.UDID, udid);
 
         return dc;
     }
@@ -62,9 +65,8 @@ public class SingleAndroidTest {
 
     @Test
     public void testUntitled() {
-        for (int i = 0; i < 5; i++) {
-            driver.get("https://www.google.co.il/search?q=" + i + "&aqs=chrome..69i57j69i60l4j69i65.1376j0j4&sourceid=chrome&ie=UTF-8");
-        }
+        System.out.println(driver.getPageSource());
+
     }
 
     @After

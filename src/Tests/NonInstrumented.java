@@ -53,19 +53,19 @@ public class NonInstrumented extends BaseTest {
     protected void androidTest() throws Exception {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-        try {
-            driver.findElement(By.xpath("//*[@text='Retry']")).click();
-            driver.findElement(By.xpath("//*[@text='Retry']")).click();
-        } catch (Exception e) {
-            System.out.println("No Retry at start");
-        }
+//        try {
+//            driver.findElement(By.xpath("//*[@text='Retry']")).click();
+//            driver.findElement(By.xpath("//*[@text='Retry']")).click();
+//        } catch (Exception e) {
+//            System.out.println("No Retry at start");
+//        }
 
-        try {
-            new WebDriverWait(driver, 5).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='ACCEPT' or @text='Accept']")));
-            driver.findElement(By.xpath("//*[@text='ACCEPT' or @text='Accept']")).click();
-        } catch (Exception e) {
-            System.out.println("No Accept at start");
-        }
+//        try {
+//            new WebDriverWait(driver, 5).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='ACCEPT' or @text='Accept']")));
+//            driver.findElement(By.xpath("//*[@text='ACCEPT' or @text='Accept']")).click();
+//        } catch (Exception e) {
+//            System.out.println("No Accept at start");
+//        }
 
         try {
             new WebDriverWait(driver, 5).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='TOP CHARTS']")));
@@ -122,13 +122,14 @@ public class NonInstrumented extends BaseTest {
         driver.findElement(By.xpath("//*[@text='London, England']")).click();
         deleteCountry("London");
         driver.executeScript("client:client.sendText(\"{HOME}\")");
+
     }
 
     private void deleteCountry(String countryStr) {
         driver.executeScript("client:client.getVisualDump(\"native\")");
         String deleteElement = "//*[contains(@text,'Delete " + countryStr + "')]  | //*[contains(@text,'London')]/*/*[@text='Remove clock']";
 
-        driver.executeScript("client:client.click(\"NATIVE\", \"xpath=//*[@text='Edit']\", 0, 1)");
+        driver.findElement(By.xpath("//*[@text='Edit']")).click();
         driver.findElement(By.xpath(deleteElement)).click();
 
         try {

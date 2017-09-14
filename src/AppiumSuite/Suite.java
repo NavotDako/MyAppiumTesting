@@ -1,9 +1,6 @@
 package AppiumSuite;
 
-import Tests.EriBankTest;
-import Tests.NonInstrumented;
-import Tests.Reboot;
-import Tests.WebTest;
+import Tests.*;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -35,22 +32,22 @@ public class Suite implements Runnable {
 
     public void run() {
         System.out.println("Starting Suite For - " + deviceID);
-      //  new Reboot(deviceID, new DesiredCapabilities(this.dc), url,1);
+//        new Reboot(deviceID, new DesiredCapabilities(this.dc), url,1);
 
         for (int i = 0; i < Runner.REP_NUM; i++) {
-           if (i != 0 && (Runner.SLEEP)) sleep();
-           new EriBankTest(deviceID, new DesiredCapabilities(this.dc), url, i + 1);
-           if (Runner.SLEEP) sleep();
-           new WebTest(deviceID, new DesiredCapabilities(this.dc), url, i + 1);
+            if (i != 0 && (Runner.SLEEP)) sleep();
+            new EriBankTest(deviceID, new DesiredCapabilities(this.dc), url, i + 1);
+            new WebTest(deviceID, new DesiredCapabilities(this.dc), url, i + 1);
+            new wiki(deviceID, new DesiredCapabilities(this.dc), url, i + 1);
 //            if (Runner.SLEEP) sleep();
-
-//            new NonInstrumented(deviceID, new DesiredCapabilities(this.dc),url);
+//            new NonInstrumented(deviceID, new DesiredCapabilities(this.dc),url,i+1);
+//            if (Runner.SLEEP) sleep();
         }
     }
 
     private void sleep() {
         try {
-            int timeToSleep = ((new Random()).nextInt(100000)) + 20000;
+            int timeToSleep = ((new Random()).nextInt(10000)) + 20000;
             System.out.println("device - " + deviceID + " is going to sleep for - " + timeToSleep + " milliseconds");
             Thread.sleep(timeToSleep);
         } catch (InterruptedException e) {

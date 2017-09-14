@@ -75,18 +75,21 @@ public class WebTest extends BaseTest {
 
     private Map<String, String> getSites() {
         Map<String, String> sitesMap = new HashMap<>();
-        //sitesMap.put("www.bbc.com", "//*[@alt='BBC']");
-        sitesMap.put("www.google.com", "//*[@id='hplogo']");
+        sitesMap.put("www.bbc.com", "//*[@alt='BBC']");
         sitesMap.put("www.amazon.com", "//*[@class='nav-logo-base nav-sprite']");
         sitesMap.put("www.apple.com", "//*[@id='ac-gn-firstfocus-small' or @id='ac-gn-firstfocus']");
         sitesMap.put("www.facebook.com", "//*[@id='header' or @class='clearfix loggedout_menubar']");
         sitesMap.put("www.wikipedia.org", "//*[@alt='WikipediA']");
-        sitesMap.put("www.instagram.com", "//*[@class='_du7bh _soakw coreSpriteLoggedOutWordmark']");
         sitesMap.put("www.reddit.com", "//*[@class='TopNav-text-vcentering']");
         sitesMap.put("www.linkedin.com", "//*[@alt='LinkedIn' and @class='lazy-loaded']");
         sitesMap.put("www.stackoverflow.com", "//*[@class='topbar-icon js-site-switcher-button icon-site-switcher-bubble' or @text='Stack Overflow']");
         sitesMap.put("www.imdb.com", "//*[@class='navbar-link' or @text='IMDb']");
         sitesMap.put("www.paypal.com", "//*[@text='PayPal' and @class='paypal-img-logo']");
+
+
+
+//        sitesMap.put("www.instagram.com", "//*[@class='_du7bh _soakw coreSpriteLoggedOutWordmark']");
+//        sitesMap.put("www.google.com", "//*[@id='hplogo']");
 //        sitesMap.put("www.netflix.com", "//*[@nodeName='svg']");
 //        sitesMap.put("www.dropbox.com", "//*[@class='dropbox-logo__type' or @alt='Dropbox']");
 //        sitesMap.put("www.yahoo.com", "xpath=//*[@id='yucs-logo-img']");

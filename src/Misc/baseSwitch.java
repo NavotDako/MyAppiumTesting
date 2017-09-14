@@ -9,8 +9,8 @@ public class baseSwitch {
 
     public static void main(String[] args) {
 
-        //  System.out.println("\nResult: " + decSwitch("1c.1", 16));
-        System.out.println("\nResult: " + noDecSwitch(123.1, 3));
+//          System.out.println("\nResult: " + decSwitch("1c.1d", 16));
+        System.out.println("\nResult: " + noDecSwitch(123, 3));
     }
 
     private static String noDecSwitch(double decNum, int newBase) {

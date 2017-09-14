@@ -8,6 +8,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.File;
@@ -15,6 +16,9 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static Misc.ExceptionExtractor.ExtractExceptions;
 
@@ -99,6 +103,12 @@ public abstract class BaseTest {
             report = (String) driver.getCapabilities().getCapability("reportUrl");
         } catch (Exception e2) {
             System.out.println("Can't get reportURL for test - " + testName + " - device - " + deviceID);
+            try{
+                report = e.getMessage().substring( e.getMessage().indexOf("reportUrl"),e.getMessage().indexOf("))"));
+            }catch (Exception ex){
+                e.printStackTrace();
+                report = e.getMessage();
+            }
         }
         try {
             time = System.currentTimeMillis() - startTime;
@@ -121,7 +131,13 @@ public abstract class BaseTest {
 
     private void reportSuccess() {
         long time = System.currentTimeMillis() - Long.parseLong((String) driver.getCapabilities().getCapability("startTime"));
-        Utils.writeToOverall(true, deviceName.replace(" ", "_").trim(), testName, null, time, (String) driver.getCapabilities().getCapability("reportUrl"), iteration);
+        String reportURL;
+        try {
+            reportURL = (String) driver.getCapabilities().getCapability("reportUrl");
+        } catch (Exception e2) {
+            reportURL = "NOT reportURL in the driver capabilities";
+        }
+        Utils.writeToOverall(true, deviceName.replace(" ", "_").trim(), testName, null, time, reportURL, iteration);
         System.out.println("--------------------------------------------------------------------------");
         System.out.println("THE TEST HAD PASSED - " + testName + " For Device - " + deviceID);
         System.out.println("--------------------------------------------------------------------------");

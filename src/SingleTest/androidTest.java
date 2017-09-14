@@ -20,8 +20,6 @@ public class AndroidTest implements Runnable {
         build = "build#" + iterationIndex;
     }
 
-
-    @Override
     public void run() {
         try {
             setUp();
