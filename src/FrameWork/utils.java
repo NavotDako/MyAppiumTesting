@@ -46,10 +46,10 @@ public class Utils {
             writer = new PrintWriter(new BufferedWriter(new FileWriter("reports\\overallReport.txt", true)));
             SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
             if (status) {
-                writer.write(String.format("%-5s%-10s%-50s%-15s%-20s%-20s\n",Runner.index+".", sdf.format(new Date(System.currentTimeMillis())), deviceID, "PASS - "+iteration, testName, (time / 1000) + "s"));
+                writer.write(String.format("%-5s%-10s%-50s%-15s%-20s%-20s%-100s\n", Runner.index + ".", sdf.format(new Date(System.currentTimeMillis())), deviceID, "PASS    " + iteration, testName, (time / 1000) + "s", reportUrl));
             } else {
-                writer.write(String.format("%-5s%-10s%-50s%-15s%-20s%-20s%-100s\n",Runner.index+".", sdf.format(new Date(System.currentTimeMillis())), deviceID, "FAIL - "+iteration, testName, (time / 1000) + "s",reportUrl));
-              //  if (Runner.GRID) writer.write(String.format("%-30s%-40s%-20s%-100s\n\n","Report URL - ",deviceID, testName, reportUrl));
+                writer.write(String.format("%-5s%-10s%-50s%-15s%-20s%-20s%-100s\n", Runner.index + ".", sdf.format(new Date(System.currentTimeMillis())), deviceID, "*FAIL*  " + iteration, testName, (time / 1000) + "s", reportUrl));
+                //  if (Runner.GRID) writer.write(String.format("%-30s%-40s%-20s%-100s\n\n","Report URL - ",deviceID, testName, reportUrl));
 
                 if (Runner.PRINT_ERROR) {
                     e.printStackTrace(writer);
@@ -107,6 +107,7 @@ public class Utils {
 
         return exceptionArray;
     }
+
     public static void screenshot(AppiumDriver driver, String path) throws IOException {
         File srcFile = driver.getScreenshotAs(OutputType.FILE);
         String filename = driver.getCapabilities().getCapability("device.name") + "#" + System.currentTimeMillis();
