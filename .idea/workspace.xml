@@ -25,9 +25,7 @@
     <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="87cd48be-74e7-42a2-9291-0fed6077d338" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FrameWork/utils.java" afterPath="$PROJECT_DIR$/src/FrameWork/utils.java" />
-    </list>
+    <list default="true" id="87cd48be-74e7-42a2-9291-0fed6077d338" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -900,7 +898,13 @@
       <option name="project" value="LOCAL" />
       <updated>1505374855527</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="expended chrome test">
+      <created>1505375024812</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1505375024812</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
