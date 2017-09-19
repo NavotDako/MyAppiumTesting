@@ -55,7 +55,7 @@ public class wiki extends BaseTest {
         driver.findElement(By.xpath(searchBox)).sendKeys("Hello Again");
         driver.findElement(By.xpath(searchButton)).click();
         try {
-            new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.id("gh-mlogo")));
+            new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(@id,'logo')]")));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -68,7 +68,7 @@ public class wiki extends BaseTest {
         String searchText =driver.findElement(By.xpath("//*[@name='_nkw']")).getAttribute("value");
         System.out.println(searchText);
         driver.findElement(By.xpath(searchButton)).click();
-        new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.id("gh-mlogo")));
+        new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(@id,'logo')]")));
     }
 
     public void splitStringAndroid(String str) {
@@ -86,18 +86,18 @@ public class wiki extends BaseTest {
     protected void iosTest() throws Exception {
         driver.rotate(ScreenOrientation.PORTRAIT);
 
-        try {
-            driver.get("http://www.apple.com");
-            new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='ac-gn-firstfocus-small' or @id='ac-gn-firstfocus']")));
-        } catch (Exception e) {
-            driver.findElement(By.xpath("//*[@text='OK']")).click();
-            driver.get("m.ebay.com");
-        }
-        try {
-            Thread.sleep(20000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            driver.get("http://www.apple.com");
+//            new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='ac-gn-firstfocus-small' or @id='ac-gn-firstfocus']")));
+//        } catch (Exception e) {
+//            driver.findElement(By.xpath("//*[@text='OK']")).click();
+//            driver.get("m.ebay.com");
+//        }
+//        try {
+//            Thread.sleep(20000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
         driver.get("http://wikipedia.org");
         try {
             driver.findElement(By.id("searchInput"));

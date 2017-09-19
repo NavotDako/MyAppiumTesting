@@ -8,6 +8,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.IOSMobileCapabilityType;
 import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.remote.MobileBrowserType;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.*;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -29,13 +30,13 @@ public class SingleAndroidTest {
     @Before
     public void setUp() throws IOException {
 
-        driver = CreateDriver(getDesiredCapabilities("011ef446b34c250f"));
+        driver = CreateDriver(getDesiredCapabilities("1115fb3c0e5f3c03"));
     }
 
     private DesiredCapabilities getDesiredCapabilities(String udid) throws IOException {
         DesiredCapabilities dc = new DesiredCapabilities();
         if (GRID) {
-            cloudServer = new CloudServer(CloudServer.CloudServerName.PUBLIC);
+            cloudServer = new CloudServer(CloudServer.CloudServerName.MY);
             dc.setCapability("username", cloudServer.USER);
             dc.setCapability("password", cloudServer.PASS);
         }
@@ -43,7 +44,8 @@ public class SingleAndroidTest {
 //        dc.setCapability(MobileCapabilityType.APP, "http://192.168.2.72:8181/AndroidApps/eriban111k.apk");
 //        dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.experitest.ExperiBank");
 //        dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".LoginActivity");
-//        dc.setCapability(MobileCapabilityType.UDID, udid);
+        dc.setCapability(MobileCapabilityType.UDID, udid);
+        dc.setBrowserName(MobileBrowserType.CHROMIUM);
 
         return dc;
     }

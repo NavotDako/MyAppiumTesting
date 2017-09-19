@@ -77,7 +77,6 @@ public class WebTest extends BaseTest {
         Map<String, String> sitesMap = new HashMap<>();
         sitesMap.put("www.bbc.com", "//*[@alt='BBC']");
         sitesMap.put("www.amazon.com", "//*[@class='nav-logo-base nav-sprite']");
-        sitesMap.put("www.apple.com", "//*[@id='ac-gn-firstfocus-small' or @id='ac-gn-firstfocus']");
         sitesMap.put("www.facebook.com", "//*[@id='header' or @class='clearfix loggedout_menubar']");
         sitesMap.put("www.wikipedia.org", "//*[@alt='WikipediA']");
         sitesMap.put("www.reddit.com", "//*[@class='TopNav-text-vcentering']");
@@ -88,6 +87,7 @@ public class WebTest extends BaseTest {
 
 
 
+//        sitesMap.put("www.apple.com", "//*[@id='ac-gn-firstfocus-small' or @id='ac-gn-firstfocus']");
 //        sitesMap.put("www.instagram.com", "//*[@class='_du7bh _soakw coreSpriteLoggedOutWordmark']");
 //        sitesMap.put("www.google.com", "//*[@id='hplogo']");
 //        sitesMap.put("www.netflix.com", "//*[@nodeName='svg']");
