@@ -1,28 +1,18 @@
 package Tests;
 
-import AppiumSuite.Runner;
-import FrameWork.NewAndroidDriver;
-import FrameWork.NewIOSDriver;
+import FrameWork.Runner;
+import AppiumSuite.NewAndroidDriver;
+import AppiumSuite.NewIOSDriver;
 import FrameWork.Utils;
+import com.experitest.appium.STClient;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import java.io.File;
-import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-import static Misc.ExceptionExtractor.ExtractExceptions;
-
-public abstract class BaseTest {
+public abstract class BaseAppiumTest {
     private final int iteration;
     private String deviceName;
     String deviceID;
@@ -31,18 +21,22 @@ public abstract class BaseTest {
     String testName;
     String url;
     private long startTime;
+    STClient clientDriver = new STClient(driver);
 
-    BaseTest(String testName, String deviceID, String url, int i) {
+
+    public BaseAppiumTest(String testName, String deviceID, String url, int i) {
         this.testName = testName;
         this.deviceID = deviceID;
         this.url = url;
         iteration = i;
-        try {
-            this.deviceOS = Runner.cloudServer.getDeviceOSByUDID(deviceID);
-            this.deviceName = Runner.cloudServer.getDeviceNameByUDID(this.deviceID);
-        } catch (IOException e) {
-            e.printStackTrace();
+        if (Runner.GRID){
+            this.deviceOS =  Runner.cloudServer.getDeviceOSByUDID(deviceID);
+            this.deviceName = Runner.cloudServer.getDeviceNameByUDID(deviceID);
+        }else{
+            this.deviceOS = Runner.LDM.getDeviceOSByUDID(deviceID);
+            this.deviceName = Runner.LDM.getDeviceNameByUDID(deviceID);
         }
+
     }
 
     public abstract DesiredCapabilities createCapabilities(DesiredCapabilities dc);
@@ -90,6 +84,12 @@ public abstract class BaseTest {
             }
             reportSuccess();
         } catch (Exception e) {
+            try {
+                driver.getPageSource();
+
+            } catch (Exception ex) {
+                System.out.println(deviceID + "- Failed to get PAGE SOURCE after failure in test - " + testName);
+            }
             reportFailure(e);
         }
         finish();
@@ -103,9 +103,9 @@ public abstract class BaseTest {
             report = (String) driver.getCapabilities().getCapability("reportUrl");
         } catch (Exception e2) {
             System.out.println("Can't get reportURL for test - " + testName + " - device - " + deviceID);
-            try{
-                report = e.getMessage().substring( e.getMessage().indexOf("reportUrl"),e.getMessage().indexOf("))"));
-            }catch (Exception ex){
+            try {
+                report = e.getMessage().substring(e.getMessage().indexOf("reportUrl"), e.getMessage().indexOf("))"));
+            } catch (Exception ex) {
                 e.printStackTrace();
                 report = e.getMessage();
             }

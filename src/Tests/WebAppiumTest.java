@@ -1,6 +1,5 @@
 package Tests;
 
-import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileBrowserType;
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -8,14 +7,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.*;
-import java.util.concurrent.TimeUnit;
 
 /**
  * Created by amit.licht on 05/24/2017.
  */
-public class WebTest extends BaseTest {
+public class WebAppiumTest extends BaseAppiumTest {
 
-    public WebTest(String deviceEntry, DesiredCapabilities generalDC, String url, int i) {
+    public WebAppiumTest(String deviceEntry, DesiredCapabilities generalDC, String url, int i) {
         super("WebTest", deviceEntry, url, i);
         DesiredCapabilities dc = createCapabilities(generalDC);
         if (init(dc)) {
@@ -72,11 +70,11 @@ public class WebTest extends BaseTest {
             }
         }
     }
-
+    //*[@class='nav-sprite nav-logo-base']
     private Map<String, String> getSites() {
         Map<String, String> sitesMap = new HashMap<>();
         sitesMap.put("www.bbc.com", "//*[@alt='BBC']");
-        sitesMap.put("www.amazon.com", "//*[@class='nav-logo-base nav-sprite']");
+        sitesMap.put("www.amazon.com", "//*[@class='nav-logo-base nav-sprite' or @class='nav-sprite nav-logo-base']");
         sitesMap.put("www.facebook.com", "//*[@id='header' or @class='clearfix loggedout_menubar']");
         sitesMap.put("www.wikipedia.org", "//*[@alt='WikipediA']");
         sitesMap.put("www.reddit.com", "//*[@class='TopNav-text-vcentering']");

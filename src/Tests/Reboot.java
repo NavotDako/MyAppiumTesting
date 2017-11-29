@@ -4,7 +4,7 @@ import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 
-public class Reboot extends BaseTest {
+public class Reboot extends BaseAppiumTest {
 
     public Reboot(String deviceID, DesiredCapabilities generalDC, String url, int iteration) {
         super("Reboot", deviceID, url, iteration);

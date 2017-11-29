@@ -3,7 +3,6 @@
   <component name="BuildServerSettings">
     <option name="LOGIN" value="Navot" />
     <option name="SERVER_URL" value="http://192.168.1.213:8090" />
-    <option name="PASSWORD" value="dfcddfc5dfc5dfcedf9bdfc6dfdfdfc9dfc1" />
     <option name="REMEMBER_ME" value="true" />
     <option name="USE_IDEA_PROXY_SETTINGS" value="true" />
     <option name="INSPECTIONS_BUILD_TYPE_IDS" />
@@ -16,8 +15,6 @@
     <option name="PERFORM_COMMIT_IF_NO_NEW_FAILED_TESTS" value="false" />
     <option name="REQUEST_CONFIRMATON" value="false" />
     <option name="PRE_TESTED_COMMIT" value="true" />
-    <option name="PROJECT_STATUS_DIALOG_SPLITTER_DIVIDER_LOCATION" value="500" />
-    <option name="CHANGES_STATUS_DIALOG_SPLITTER_DIVIDER_LOCATION" value="500" />
     <option name="FILTER_BY_STATUS" value="false" />
     <option name="FILTER_MARKED_AS_FIXED" value="false" />
     <option name="SHOW_CLOSE_PROMPT" value="true" />
@@ -26,10 +23,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87cd48be-74e7-42a2-9291-0fed6077d338" name="Default" comment="expended chrome test">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/appium-extension-11.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_experitest_manager_client_11_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_experitest_manager_client_api_11_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_experitest_manager_client_standalone_without_unittest_11_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_experitest_mobile_webdriver_10_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_experitest_seetest_client_11_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/appium_extension_11_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/SeeTest_LaunchBrowserLoop.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/SeeTest_MultipleSites.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/SeeTest_NonInstrumented.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/SeeTest_Rebooting.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/SeeTest_SimulateCapture.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/SeeTest_TenFreeApps.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/SeeTest_UiCatalog.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/FrameWork/User.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Misc/main.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SeeTestFramework/BaseSeeTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SeeTestFramework/SeeTestLocalDeviceManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SeeTestFramework/SeeTestSuite.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SeetestTests/SeeTest_EriBank.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SeetestTests/SeeTest_eBay.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/SingleTest/simple.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppiumSuite/Runner.java" afterPath="$PROJECT_DIR$/src/FrameWork/Runner.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AppiumSuite/Suite.java" afterPath="$PROJECT_DIR$/src/AppiumSuite/AppiumSuite.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/FrameWork/NewAndroidDriver.java" afterPath="$PROJECT_DIR$/src/AppiumSuite/NewAndroidDriver.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/FrameWork/NewIOSDriver.java" afterPath="$PROJECT_DIR$/src/AppiumSuite/NewIOSDriver.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Tests/BaseTest.java" afterPath="$PROJECT_DIR$/src/Tests/BaseAppiumTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Tests/EriBankTest.java" afterPath="$PROJECT_DIR$/src/Tests/EriBankAppiumTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Tests/WebTest.java" afterPath="$PROJECT_DIR$/src/Tests/WebAppiumTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AppiumTesting.iml" afterPath="$PROJECT_DIR$/AppiumTesting.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/build.txt" afterPath="$PROJECT_DIR$/lib/build.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FrameWork/CloudServer.java" afterPath="$PROJECT_DIR$/src/FrameWork/CloudServer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FrameWork/utils.java" afterPath="$PROJECT_DIR$/src/FrameWork/utils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Misc/UserTest.java" afterPath="$PROJECT_DIR$/src/Misc/UserTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SingleTest/SingleAndroidTest.java" afterPath="$PROJECT_DIR$/src/SingleTest/SingleAndroidTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tests/WebTest.java" afterPath="$PROJECT_DIR$/src/Tests/WebTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SingleTest/SingleIOSTest.java" afterPath="$PROJECT_DIR$/src/SingleTest/SingleIOSTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SingleTest/Untitled.java" afterPath="$PROJECT_DIR$/src/SingleTest/Untitled.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tests/NonInstrumented.java" afterPath="$PROJECT_DIR$/src/Tests/NonInstrumented.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tests/Reboot.java" afterPath="$PROJECT_DIR$/src/Tests/Reboot.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tests/UICatalog.java" afterPath="$PROJECT_DIR$/src/Tests/UICatalog.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tests/wiki.java" afterPath="$PROJECT_DIR$/src/Tests/wiki.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -56,15 +91,61 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Runner.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppiumSuite/Runner.java">
+      <file leaf-file-name="Runner.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/FrameWork/Runner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.3693901">
+              <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
               <folding>
                 <element signature="method#getBuildNum#0;class#Runner#0" expanded="false" />
+                <element signature="method#getDevicesList#0;class#Runner#0" expanded="false" />
                 <element signature="method#getURL#0;class#Runner#0" expanded="false" />
-                <element signature="method#PrepareReportsFolders#0;class#Runner#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Utils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FrameWork/Utils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Misc/UserTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="176" column="0" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseSeeTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SeeTestFramework/BaseSeeTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="142" column="23" selection-start-line="142" selection-start-column="23" selection-end-line="142" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="method#CreateClient#0;class#BaseSeeTest#0" expanded="false" />
+                <element signature="method#getGridClient#0;class#BaseSeeTest#0" expanded="false" />
+                <element signature="method#getClient#0;class#BaseSeeTest#0" expanded="false" />
+                <element signature="method#reportSuccess#0;class#BaseSeeTest#0" expanded="false" />
+                <element signature="method#finish#0;class#BaseSeeTest#0" expanded="false" />
+                <element signature="method#prepareReporter#0;class#BaseSeeTest#0" expanded="false" />
+                <element signature="method#prepareDevice#0;class#BaseSeeTest#0" expanded="false" />
+                <element signature="method#tryToCollectSupportData#0;class#BaseSeeTest#0" expanded="false" />
+                <element signature="method#addSupportDataToReporter#0;class#BaseSeeTest#0" expanded="false" />
+                <element signature="method#getErrors#0;class#BaseSeeTest#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -74,52 +155,20 @@
         <entry file="file://$PROJECT_DIR$/reports/overallReport.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="556" column="167" selection-start-line="0" selection-start-column="0" selection-end-line="2713" selection-end-column="0" />
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SingleAndroidTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/SingleTest/SingleAndroidTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35416666">
-              <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WebTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Tests/WebTest.java">
+      <file leaf-file-name="SeeTestSuite.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SeeTestFramework/SeeTestSuite.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="92" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="92" />
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding>
-                <element signature="method#iosTest#0;class#WebTest#0" expanded="false" />
+                <element signature="imports" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wiki.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Tests/wiki.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="70" column="125" selection-start-line="70" selection-start-column="125" selection-end-line="70" selection-end-column="125" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Suite.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppiumSuite/Suite.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="39" column="80" selection-start-line="39" selection-start-column="80" selection-end-line="39" selection-end-column="80" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -149,28 +198,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/FrameWork/Suite.java" />
-        <option value="$PROJECT_DIR$/src/FrameWork/utils.java" />
-        <option value="$PROJECT_DIR$/src/playGround/stm.java" />
-        <option value="$PROJECT_DIR$/src/playGround/Untitled.java" />
-        <option value="$PROJECT_DIR$/src/playGround/runOSSomething.java" />
-        <option value="$PROJECT_DIR$/src/playGround/UntitledIOS.java" />
-        <option value="$PROJECT_DIR$/src/playGround/UntitledAndroid.java" />
-        <option value="$PROJECT_DIR$/src/SingleTest/UntitledAndroid.java" />
-        <option value="$PROJECT_DIR$/src/SingleTest/UntitledIOS.java" />
-        <option value="$PROJECT_DIR$/src/FrameWork/Runner.java" />
-        <option value="$PROJECT_DIR$/src/SingleTest/runOSSomething.java" />
-        <option value="$PROJECT_DIR$/src/SingleTest/androidTest.java" />
-        <option value="$PROJECT_DIR$/src/SingleTest/singleTestRunner.java" />
-        <option value="$PROJECT_DIR$/src/SingleTest/SingleTestRunner.java" />
-        <option value="$PROJECT_DIR$/src/playGround/SingleTest.java" />
-        <option value="$PROJECT_DIR$/src/playGround/SingleAndroidTest.java" />
-        <option value="$PROJECT_DIR$/src/playGround/SingleIOSTest.java" />
-        <option value="$PROJECT_DIR$/src/Tests/UICatalog.java" />
-        <option value="$PROJECT_DIR$/src/Misc/play.java" />
-        <option value="$PROJECT_DIR$/src/Misc/play2.java" />
-        <option value="$PROJECT_DIR$/src/Tests/Reboot.java" />
-        <option value="$PROJECT_DIR$/src/Misc/play3.java" />
         <option value="$PROJECT_DIR$/src/SingleTest/zekraTest.java" />
         <option value="$PROJECT_DIR$/src/SingleTest/EribankAndroidTest.java" />
         <option value="$PROJECT_DIR$/src/SingleTest/AndroidTest.java" />
@@ -178,28 +205,50 @@
         <option value="$PROJECT_DIR$/src/Misc/baseSwitch.java" />
         <option value="$PROJECT_DIR$/src/Misc/sadsdas.java" />
         <option value="$PROJECT_DIR$/src/SingleTest/testest.java" />
-        <option value="$PROJECT_DIR$/src/FrameWork/NewAndroidDriver.java" />
-        <option value="$PROJECT_DIR$/src/FrameWork/NewIOSDriver.java" />
         <option value="$PROJECT_DIR$/src/Misc/fasdf.java" />
-        <option value="$PROJECT_DIR$/src/Misc/UserTest.java" />
         <option value="$PROJECT_DIR$/src/Misc/SE.java" />
-        <option value="$PROJECT_DIR$/src/Tests/EriBankTest.java" />
-        <option value="$PROJECT_DIR$/src/Tests/NonInstrumented.java" />
-        <option value="$PROJECT_DIR$/src/SingleTest/Untitled.java" />
-        <option value="$PROJECT_DIR$/src/FrameWork/CloudServer.java" />
         <option value="$PROJECT_DIR$/src/Malik.java" />
         <option value="$PROJECT_DIR$/src/Misc/testingtesting.java" />
         <option value="$PROJECT_DIR$/src/SingleTest/junit5.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/FrameWork/NewAndroidDriver.java" />
+        <option value="$PROJECT_DIR$/src/SingleTest/Untitled.java" />
+        <option value="$PROJECT_DIR$/src/Tests/NonInstrumented.java" />
         <option value="$PROJECT_DIR$/src/Tests/BaseTest.java" />
-        <option value="$PROJECT_DIR$/src/FrameWork/Utils.java" />
-        <option value="$PROJECT_DIR$/src/SingleTest/SingleIOSTest.java" />
-        <option value="$PROJECT_DIR$/src/AppiumSuite/Suite.java" />
-        <option value="$PROJECT_DIR$/src/Tests/WebTest.java" />
-        <option value="$PROJECT_DIR$/src/AppiumSuite/Runner.java" />
-        <option value="$PROJECT_DIR$/reports/overallReport.txt" />
-        <option value="$PROJECT_DIR$/src/Tests/wiki.java" />
         <option value="$PROJECT_DIR$/src/SingleTest/SingleAndroidTest.java" />
+        <option value="$PROJECT_DIR$/src/Misc/main.java" />
+        <option value="$PROJECT_DIR$/src/Tests/WebTest.java" />
+        <option value="$PROJECT_DIR$/src/SingleTest/SingleIOSTest.java" />
+        <option value="$PROJECT_DIR$/src/FrameWork/Utils.java" />
+        <option value="$PROJECT_DIR$/src/FrameWork/NewIOSDriver.java" />
+        <option value="$PROJECT_DIR$/src/SingleTest/simple.java" />
+        <option value="$PROJECT_DIR$/src/Tests/wiki.java" />
+        <option value="$PROJECT_DIR$/src/Tests/EriBankTest.java" />
+        <option value="$PROJECT_DIR$/src/FrameWork/User.java" />
+        <option value="$PROJECT_DIR$/src/AppiumSuite/Suite.java" />
+        <option value="$PROJECT_DIR$/src/SeetestTests/Tests/TenFreeApps.java" />
+        <option value="$PROJECT_DIR$/src/SeetestTests/Tests/BaseSeeTest.java" />
+        <option value="$PROJECT_DIR$/src/SeeTestFramework/Suite.java" />
+        <option value="$PROJECT_DIR$/src/SeeTestFramework/SeeTestUtils.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/SeetestTests/SeeTest_MultipleSites.java" />
+        <option value="$PROJECT_DIR$/src/SeetestTests/SeeTest_Rebooting.java" />
+        <option value="$PROJECT_DIR$/src/SeetestTests/SeeTest_SimulateCapture.java" />
+        <option value="$PROJECT_DIR$/src/SeetestTests/SeeTest_TenFreeApps.java" />
+        <option value="$PROJECT_DIR$/src/SeetestTests/SeeTest_UiCatalog.java" />
+        <option value="$PROJECT_DIR$/src/SeetestTests/SeeTest_NonInstrumented.java" />
+        <option value="$PROJECT_DIR$/src/SeetestTests/SeeTest_LaunchBrowserLoop.java" />
+        <option value="$PROJECT_DIR$/src/SeeTestFramework/SeeTestLocalDeviceManager.java" />
+        <option value="$PROJECT_DIR$/src/Tests/BaseAppiumTest.java" />
+        <option value="$PROJECT_DIR$/src/AppiumSuite/Runner.java" />
+        <option value="$PROJECT_DIR$/src/AppiumSuite/AppiumSuite.java" />
+        <option value="$PROJECT_DIR$/src/SeetestTests/SeeTest_EriBank.java" />
+        <option value="$PROJECT_DIR$/src/SeeTestFramework/BaseSeeTest.java" />
+        <option value="$PROJECT_DIR$/src/SeetestTests/SeeTest_eBay.java" />
+        <option value="$PROJECT_DIR$/src/FrameWork/CloudServer.java" />
+        <option value="$PROJECT_DIR$/src/SeeTestFramework/SeeTestSuite.java" />
+        <option value="$PROJECT_DIR$/reports/overallReport.txt" />
+        <option value="$PROJECT_DIR$/src/FrameWork/Runner.java" />
+        <option value="$PROJECT_DIR$/src/Misc/UserTest.java" />
       </list>
     </option>
   </component>
@@ -276,9 +325,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -321,40 +367,65 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FrameWork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AppiumTesting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AppiumTesting" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="reports" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/JavaProductExample" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/CloudDeepTestStxw" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.54367816" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="SearchEverywhereHistoryKey" value="DriverComm&#9;PSI&#9;JAVA://org.openqa.selenium.remote.DriverCommand" />
+    <property name="SearchEverywhereHistoryKey" value="executeS&#9;PSI&#9;JAVA://com.sun.webkit.WebPage#executeScript&#10;DriverComm&#9;PSI&#9;JAVA://org.openqa.selenium.remote.DriverCommand" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="FrameWork" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\DELL\Projects\AppiumTesting\src\SeetestTests" />
       <recent name="C:\Users\DELL\Projects\AppiumTesting\lib" />
       <recent name="C:\Users\DELL\Projects\AppiumTesting\apps" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="SeeTestFramework" />
+      <recent name="SeetestTests.Tests" />
       <recent name="Misc" />
       <recent name="playGround" />
       <recent name="Utils" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\DELL\Projects\AppiumTesting\bin" />
       <recent name="C:\Users\DELL\Projects\AppiumTesting\src\AppiumSuite" />
       <recent name="C:\Users\DELL\Projects\AppiumTesting\src" />
     </key>
@@ -371,7 +442,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SingleAndroidTest">
+  <component name="RunManager" selected="Application.Runner">
     <configuration default="false" name="Runner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -379,7 +450,7 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="AppiumSuite.Runner" />
+      <option name="MAIN_CLASS_NAME" value="FrameWork.Runner" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -444,7 +515,7 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="Untitled" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="simple" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="SingleTest.*" />
@@ -455,7 +526,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="SingleTest" />
-      <option name="MAIN_CLASS_NAME" value="SingleTest.Untitled" />
+      <option name="MAIN_CLASS_NAME" value="SingleTest.simple" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -470,24 +541,30 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="testingtesting" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="simple.testUntitled" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="Misc.*" />
+          <option name="PATTERN" value="SingleTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="Misc.testingtesting" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <module name="AppiumTesting" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="PACKAGE_NAME" value="SingleTest" />
+      <option name="MAIN_CLASS_NAME" value="SingleTest.simple" />
+      <option name="METHOD_NAME" value="testUntitled" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="AppiumTesting" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
       <envs />
+      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -577,6 +654,16 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="BatchConfigurationType" factoryName="Batch">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
       <method />
     </configuration>
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
@@ -773,16 +860,16 @@
       <item index="0" class="java.lang.String" itemvalue="Application.Runner" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.SingleIOSTest" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.SingleAndroidTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.Untitled" />
-      <item index="4" class="java.lang.String" itemvalue="Application.testingtesting" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.simple" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.simple.testUntitled" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.SingleAndroidTest" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Runner" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.SingleIOSTest" />
-        <item index="3" class="java.lang.String" itemvalue="Application.testingtesting" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.Untitled" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Runner" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.simple" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.simple.testUntitled" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.SingleIOSTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.SingleAndroidTest" />
       </list>
     </recent_temporary>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
@@ -914,39 +1001,45 @@
       <option name="project" value="LOCAL" />
       <updated>1505375055209</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="expended chrome test">
+      <created>1505815702279</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1505815702279</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SingleAndroidTest - 2017.09.06 at 16h 12m 47s.xml">
-      <configuration name="SingleAndroidTest" configurationId="JUnit" />
+    <history-entry file="simple - 2017.11.14 at 14h 18m 22s.xml">
+      <configuration name="simple" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SingleAndroidTest - 2017.09.06 at 16h 25m 09s.xml">
-      <configuration name="SingleAndroidTest" configurationId="JUnit" />
+    <history-entry file="simple - 2017.11.14 at 14h 20m 52s.xml">
+      <configuration name="simple" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SingleAndroidTest - 2017.09.06 at 16h 26m 09s.xml">
-      <configuration name="SingleAndroidTest" configurationId="JUnit" />
+    <history-entry file="simple - 2017.11.14 at 14h 23m 38s.xml">
+      <configuration name="simple" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SingleAndroidTest - 2017.09.19 at 10h 55m 19s.xml">
-      <configuration name="SingleAndroidTest" configurationId="JUnit" />
+    <history-entry file="simple - 2017.11.14 at 14h 30m 04s.xml">
+      <configuration name="simple" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SingleAndroidTest - 2017.09.19 at 10h 56m 06s.xml">
-      <configuration name="SingleAndroidTest" configurationId="JUnit" />
+    <history-entry file="simple - 2017.11.14 at 14h 33m 41s.xml">
+      <configuration name="simple" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SingleIOSTest - 2017.09.05 at 18h 26m 38s.xml">
-      <configuration name="SingleIOSTest" configurationId="JUnit" />
+    <history-entry file="simple - 2017.11.14 at 14h 34m 18s.xml">
+      <configuration name="simple" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SingleIOSTest - 2017.09.05 at 18h 27m 41s.xml">
-      <configuration name="SingleIOSTest" configurationId="JUnit" />
+    <history-entry file="simple - 2017.11.14 at 14h 35m 27s.xml">
+      <configuration name="simple" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SingleIOSTest - 2017.09.06 at 16h 16m 04s.xml">
-      <configuration name="SingleIOSTest" configurationId="JUnit" />
+    <history-entry file="simple - 2017.11.14 at 14h 36m 12s.xml">
+      <configuration name="simple" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SingleIOSTest - 2017.09.13 at 17h 07m 25s.xml">
-      <configuration name="SingleIOSTest" configurationId="JUnit" />
+    <history-entry file="simple - 2017.11.14 at 14h 38m 04s.xml">
+      <configuration name="simple" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SingleIOSTest - 2017.09.13 at 17h 09m 10s.xml">
-      <configuration name="SingleIOSTest" configurationId="JUnit" />
+    <history-entry file="simple_testUntitled - 2017.11.14 at 14h 19m 33s.xml">
+      <configuration name="simple.testUntitled" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
@@ -962,26 +1055,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-107" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <frame x="-1928" y="-107" width="1936" height="1056" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32664436" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4949833" sideWeight="0.510661" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08742005" sideWeight="0.49264705" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20362474" sideWeight="0.49264705" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4871795" sideWeight="0.48933902" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3277405" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17324094" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23720682" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44147158" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -990,46 +1080,16 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43924192" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32664436" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27759197" sideWeight="0.48933902" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26385927" sideWeight="0.50735295" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43589744" sideWeight="0.50852877" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17750533" sideWeight="0.49264705" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44147158" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32664436" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5953177" sideWeight="0.4914712" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26385927" sideWeight="0.50735295" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17324094" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -1133,22 +1193,34 @@
           <option name="timeStamp" value="143" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Tests/wiki.java</url>
-          <line>192</line>
+          <url>file://$PROJECT_DIR$/src/SingleTest/SingleIOSTest.java</url>
+          <line>64</line>
           <properties />
-          <option name="timeStamp" value="192" />
+          <option name="timeStamp" value="193" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/SingleTest/SingleAndroidTest.java</url>
+          <line>64</line>
+          <properties />
+          <option name="timeStamp" value="197" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/SingleTest/SingleIOSTest.java</url>
-          <line>68</line>
+          <line>53</line>
           <properties />
-          <option name="timeStamp" value="193" />
+          <option name="timeStamp" value="198" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/AppiumSuite/AppiumSuite.java</url>
+          <line>29</line>
+          <properties />
+          <option name="timeStamp" value="200" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="194" />
+      <option name="time" value="204" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1157,149 +1229,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Tests/WebTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="26" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
-          <folding>
-            <element signature="method#iosTest#0;class#WebTest#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_91/src.zip!/java/lang/ProcessBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="1003" column="19" selection-start-line="1003" selection-start-column="19" selection-end-line="1003" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/3.4.0/selenium-remote-driver-3.4.0.jar!/org/openqa/selenium/remote/RemoteWebDriver.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8609407">
-          <caret line="590" column="13" selection-start-line="590" selection-start-column="13" selection-end-line="590" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/2.53.1/selenium-remote-driver-2.53.1.jar!/org/openqa/selenium/remote/RemoteWebDriver.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.062615104">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/internal/runners/statements/RunAfters.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42746615">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/2.53.1/selenium-api-2.53.1-sources.jar!/org/openqa/selenium/remote/DesiredCapabilities.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33269963">
-          <caret line="75" column="9" selection-start-line="75" selection-start-column="9" selection-end-line="75" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/2.53.1/selenium-remote-driver-2.53.1-sources.jar!/org/openqa/selenium/remote/RemoteWebElement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="178" column="0" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/2.53.1/selenium-remote-driver-2.53.1-sources.jar!/org/openqa/selenium/remote/RemoteWebDriver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="637" column="0" selection-start-line="637" selection-start-column="0" selection-end-line="637" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/2.53.0/selenium-remote-driver-2.53.0.jar!/org/openqa/selenium/remote/DriverCommand.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15077606">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/2.53.0/selenium-remote-driver-2.53.0.jar!/org/openqa/selenium/remote/service/DriverCommandExecutor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22616407">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_91/src.zip!/java/util/concurrent/ExecutorService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="209" column="12" selection-start-line="209" selection-start-column="12" selection-end-line="209" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_91/src.zip!/java/lang/Throwable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="632" column="16" selection-start-line="632" selection-start-column="16" selection-end-line="632" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Misc/ExceptionExtractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7533719">
-          <caret line="27" column="70" selection-start-line="27" selection-start-column="70" selection-end-line="27" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tests/UICatalog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17708333">
-          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Misc/play.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/build.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_91/src.zip!/java/util/Random.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="327" column="15" selection-start-line="327" selection-start-column="15" selection-end-line="327" selection-end-column="15" />
-          <folding>
-            <element signature="e#11985#11986#0" expanded="false" />
-            <element signature="e#12016#12017#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Misc/spiral.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.65194803">
@@ -1343,25 +1272,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tests/Reboot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.404814">
-          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/experitest/selenium-remote-driver/2.53.1/selenium-remote-driver-2.53.1.jar!/org/openqa/selenium/remote/RemoteWebDriver.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37892377">
-          <caret line="557" column="81" selection-start-line="557" selection-start-column="81" selection-end-line="557" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_91/src.zip!/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
           <caret line="695" column="29" selection-start-line="695" selection-start-column="29" selection-end-line="695" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1369,48 +1283,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3324397">
           <caret line="510" column="0" selection-start-line="510" selection-start-column="0" selection-end-line="510" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/experitest/java-client/4.1.2/java-client-4.1.2.jar!/io/appium/java_client/DefaultGenericMobileDriver.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.740741">
-          <caret line="36" column="30" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tests/NonInstrumented.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49036402">
-          <caret line="118" column="95" selection-start-line="118" selection-start-column="95" selection-end-line="118" selection-end-column="95" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FrameWork/NewAndroidDriver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SingleTest/Untitled.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12633833">
-          <caret line="27" column="54" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FrameWork/NewIOSDriver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1418,52 +1290,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FrameWork/CloudServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0917647">
-          <caret line="73" column="67" selection-start-line="73" selection-start-column="27" selection-end-line="73" selection-end-column="67" />
-          <folding>
-            <element signature="method#main#0;class#CloudServer#0" expanded="false" />
-            <element signature="method#toString#0;class#CloudServer#0" expanded="false" />
-            <element signature="method#getAllAvailableDevices#0;class#CloudServer#0" expanded="false" />
-            <element signature="method#getAvailableDevicesList#0;class#CloudServer#0" expanded="false" />
-            <element signature="method#GetFilteredDevices#0;class#CloudServer#0" expanded="false" />
-            <element signature="method#getDeviceOSByUDID#0;class#CloudServer#0" expanded="false" />
-            <element signature="method#getDeviceOS#0;class#CloudServer#0" expanded="false" />
-            <element signature="method#getDeviceName#0;class#CloudServer#0" expanded="false" />
-            <element signature="method#getDeviceNameByUDID#0;class#CloudServer#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Misc/SE.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24">
-          <caret line="65" column="26" selection-start-line="65" selection-start-column="26" selection-end-line="65" selection-end-column="26" />
-          <folding>
-            <element signature="method#DeleteUsers#0;class#SE#0" expanded="false" />
-            <element signature="method#login#0;class#SE#0" expanded="false" />
-            <element signature="e#4130#4139#0" expanded="false" />
-            <element signature="method#addNewUser#0;class#SE#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Misc/UserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="68" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="68" />
-          <folding>
-            <element signature="method#UserTest#0;class#UserTest#0" expanded="false" />
-            <element signature="method#switchToSTAW#0;class#UserTest#0" expanded="false" />
-            <element signature="method#openSTAW#0;class#UserTest#0" expanded="false" />
-            <element signature="method#waitForWindow#0;class#UserTest#0" expanded="false" />
-            <element signature="method#firstTime#0;class#UserTest#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1474,14 +1300,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.59818184">
-          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_91/src.zip!/java/util/function/Function.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3325062">
@@ -1489,70 +1307,269 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/SingleTest/Untitled.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8657407">
+          <caret line="22" column="61" selection-start-line="22" selection-start-column="61" selection-end-line="22" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_91/javafx-src.zip!/com/sun/webkit/WebPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21527778">
+          <caret line="1427" column="18" selection-start-line="1427" selection-start-column="18" selection-end-line="1427" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppiumSuite/NewAndroidDriver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/appium-extension-11.3.jar!/com/experitest/appium/STClient.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.444445">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/experitest/selenium-remote-driver/2.53.1/selenium-remote-driver-2.53.1.jar!/org/openqa/selenium/remote/RemoteWebDriver.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.814815">
+          <caret line="163" column="11" selection-start-line="163" selection-start-column="11" selection-end-line="163" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SingleTest/SingleAndroidTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.68710357">
+          <caret line="73" column="54" selection-start-line="73" selection-start-column="12" selection-end-line="73" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Misc/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6828753">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/SingleTest/SingleIOSTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.421875">
-          <caret line="60" column="16" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FrameWork/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41294643">
-          <caret line="50" column="173" selection-start-line="50" selection-start-column="173" selection-end-line="50" selection-end-column="173" />
-          <folding>
-            <element signature="method#writeToDeviceLog#0;class#Utils#0" expanded="false" />
-            <element signature="method#DeleteRecursive#0;class#Utils#0" expanded="false" />
-            <element signature="method#getAndWriteExceptions#0;class#Utils#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tests/EriBankTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.03794643">
-          <caret line="45" column="0" selection-start-line="20" selection-start-column="3" selection-end-line="45" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="74" selection-start-line="39" selection-start-column="74" selection-end-line="39" selection-end-column="74" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tests/BaseTest.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/experitest/appium/4.1.2/appium-4.1.2.jar!/io/appium/java_client/ios/IOSDriver.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.071428575">
-          <caret line="79" column="16" selection-start-line="79" selection-start-column="16" selection-end-line="79" selection-end-column="16" />
-          <folding />
+        <state vertical-scroll-proportion="0.35421687">
+          <caret line="36" column="11" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppiumSuite/Suite.java">
+    <entry file="file://$PROJECT_DIR$/src/Misc/SE.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1923077">
+          <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tests/Reboot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.96153843">
+          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/experitest/selenium-api/2.53.1/selenium-api-2.53.1.jar!/org/openqa/selenium/Capabilities.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24578314">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/experitest/selenium-api/2.53.1/selenium-api-2.53.1.jar!/org/openqa/selenium/remote/DesiredCapabilities.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.72289157">
+          <caret line="58" column="11" selection-start-line="58" selection-start-column="11" selection-end-line="58" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SingleTest/simple.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="80" selection-start-line="39" selection-start-column="80" selection-end-line="39" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppiumSuite/Runner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-          <folding>
-            <element signature="method#getBuildNum#0;class#Runner#0" expanded="false" />
-            <element signature="method#getURL#0;class#Runner#0" expanded="false" />
-            <element signature="method#PrepareReportsFolders#0;class#Runner#0" expanded="false" />
-          </folding>
+          <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tests/wiki.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="70" column="125" selection-start-line="70" selection-start-column="125" selection-end-line="70" selection-end-column="125" />
+          <caret line="96" column="47" selection-start-line="96" selection-start-column="47" selection-end-line="96" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppiumSuite/NewIOSDriver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="50" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrameWork/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22274882">
+          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tests/WebAppiumTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39240506">
+          <caret line="78" column="114" selection-start-line="78" selection-start-column="114" selection-end-line="78" selection-end-column="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SeeTestFramework/SeeTestLocalDeviceManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="75" column="5" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="method#parseDocument#0;class#SeeTestLocalDeviceManager#0" expanded="false" />
+            <element signature="method#getDeviceList#0;class#SeeTestLocalDeviceManager#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tests/NonInstrumented.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="131" column="74" selection-start-line="131" selection-start-column="74" selection-end-line="131" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tests/BaseAppiumTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="170" column="0" selection-start-line="156" selection-start-column="3" selection-end-line="170" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SeetestTests/SeeTest_EriBank.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tests/EriBankAppiumTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="51" selection-start-line="44" selection-start-column="51" selection-end-line="44" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SeetestTests/SeeTest_eBay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/SeeTest_LaunchBrowserLoop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/SeeTest_MultipleSites.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="54" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/SeeTest_NonInstrumented.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/SeeTest_Rebooting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/SeeTest_SimulateCapture.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/SeeTest_TenFreeApps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/SeeTest_UiCatalog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18411967">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppiumSuite/AppiumSuite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5212888">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <marker date="1511367032005" expanded="true" signature="1657:1659" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrameWork/CloudServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding>
+            <element signature="method#main#0;class#CloudServer#0" expanded="false" />
+            <element signature="method#toString#0;class#CloudServer#0" expanded="false" />
+            <element signature="method#getRandomUser#0;class#CloudServer#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SeeTestFramework/SeeTestSuite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1560,26 +1577,60 @@
     <entry file="file://$PROJECT_DIR$/reports/overallReport.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="556" column="167" selection-start-line="0" selection-start-column="0" selection-end-line="2713" selection-end-column="0" />
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tests/WebTest.java">
+    <entry file="file://$PROJECT_DIR$/src/SeeTestFramework/BaseSeeTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="92" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="92" />
+          <caret line="142" column="23" selection-start-line="142" selection-start-column="23" selection-end-line="142" selection-end-column="23" />
           <folding>
-            <element signature="method#iosTest#0;class#WebTest#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="method#CreateClient#0;class#BaseSeeTest#0" expanded="false" />
+            <element signature="method#getGridClient#0;class#BaseSeeTest#0" expanded="false" />
+            <element signature="method#getClient#0;class#BaseSeeTest#0" expanded="false" />
+            <element signature="method#reportSuccess#0;class#BaseSeeTest#0" expanded="false" />
+            <element signature="method#finish#0;class#BaseSeeTest#0" expanded="false" />
+            <element signature="method#prepareReporter#0;class#BaseSeeTest#0" expanded="false" />
+            <element signature="method#prepareDevice#0;class#BaseSeeTest#0" expanded="false" />
+            <element signature="method#tryToCollectSupportData#0;class#BaseSeeTest#0" expanded="false" />
+            <element signature="method#addSupportDataToReporter#0;class#BaseSeeTest#0" expanded="false" />
+            <element signature="method#getErrors#0;class#BaseSeeTest#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SingleTest/SingleAndroidTest.java">
+    <entry file="file://$PROJECT_DIR$/src/FrameWork/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35416666">
-          <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Misc/UserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="176" column="0" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrameWork/Runner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3693901">
+          <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+          <folding>
+            <element signature="method#getBuildNum#0;class#Runner#0" expanded="false" />
+            <element signature="method#getDevicesList#0;class#Runner#0" expanded="false" />
+            <element signature="method#getURL#0;class#Runner#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

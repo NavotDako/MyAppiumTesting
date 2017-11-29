@@ -13,15 +13,18 @@ import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 public class CloudServer {
     private static String webPage;
     private static String authStringEnc;
     private static String DEVICES_URL = "/devices";
-    private String HOST;
-    private String PORT;
+    public String HOST;
+    public String PORT;
     public String USER;
     public String PASS;
+    public String PROJECT;
+    public boolean SECURED;
     public String gridURL;
     CloudServerName cloudName;
     private String authString;
@@ -80,17 +83,33 @@ public class CloudServer {
         System.out.println("Cloud Details:\n" + this.toString());
         try {
             result = doGet(DEVICES_URL);
+            System.out.println(result);
         } catch (IOException e) {
             e.printStackTrace();
         }
+        System.out.println("Connection to Cloud IP - "+ HOST+ " - Is OK");
     }
 
     public String toString() {
         return (String.format("%-20s\n%-10s\n%-20s\n", "HOST - " + HOST, "PORT - " + PORT, "USER - " + USER));
     }
 
+    public User getRandomUser() {
+        Random r = new Random();
+        int selection = r.nextInt(3);
+        switch (selection) {
+            case 0:
+                return new User("admin", "Experitest2012");
+            case 1:
+                return new User("projectadmin", "Experitest2012");
+            case 2:
+                return new User("user", "Experitest2012");
+        }
+        return null;
+    }
+
     public enum CloudServerName {
-        MY, QA, MIRRON, PUBLIC, EYAl, QA_Not_Secured, MY_N_S,YEHUDA, ATT
+        MY, QA, MIRRON, PUBLIC, EYAl, QA_Not_Secured, MY_N_S, YEHUDA, DIKLA, ARIEL, ATT
     }
 
     public void updateCloudDetails() {
@@ -98,6 +117,20 @@ public class CloudServer {
             case MY:
                 HOST = "192.168.2.13";
                 PORT = "80";
+                USER = "admin";
+                PASS = "Experitest2012";
+                PROJECT = "default";
+                SECURED = false;
+                break;
+            case ARIEL:
+                HOST = "192.168.2.108";
+                PORT = "80";
+                USER = "admin";
+                PASS = "Experitest2012";
+                break;
+            case DIKLA:
+                HOST = "192.168.1.59";
+                PORT = "8090";
                 USER = "admin";
                 PASS = "Experitest2012";
                 break;
@@ -235,7 +268,7 @@ public class CloudServer {
         }
     }
 
-    public String getDeviceOSByUDID(String UDID) throws IOException {
+    public String getDeviceOSByUDID(String UDID){
         String deviceOS = getDeviceOS(result, UDID);
         return deviceOS;
     }
@@ -292,7 +325,7 @@ public class CloudServer {
         return deviceOs;
     }
 
-    public String getDeviceNameByUDID(String deviceID) throws IOException {
+    public String getDeviceNameByUDID(String deviceID) {
         String deviceOS = getDeviceName(deviceID);
         return deviceOS;
     }

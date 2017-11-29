@@ -1,29 +1,41 @@
-package AppiumSuite;
+package FrameWork;
 
+import AppiumSuite.AppiumSuite;
 import FrameWork.CloudServer;
 import FrameWork.Utils;
+import SeeTestFramework.SeeTestLocalDeviceManager;
+import SeeTestFramework.SeeTestSuite;
 
 import java.io.*;
 import java.util.*;
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 public class Runner {
-    static int REP_NUM = 100;
+    public static int REP_NUM = 20;
+    public static boolean APPIUM = true;
     public static boolean GRID = true;
+
     private static boolean ALL_DEVICES = true;
     public static String USED_OS = "all"; //android//ios//all
 
-    static String reportFolderString = "c:\\temp\\AppiumReports";
+    public static boolean ERIBANK = true;
+    public static boolean WEBTEST = false;
+    public static boolean WIKI = false;
+    public static boolean REBOOT = false;
+
+    public static String reportFolderString = "c:\\temp\\Reports";
     public static int index = 1;
     public static boolean SCAN_LOG = false;
     public static boolean PRINT_ERROR = false;
 
     public static CloudServer cloudServer;
+    public static SeeTestLocalDeviceManager LDM = null;
+
     public static String BUILD_NUM;
     public static boolean SLEEP = true;
+
 
     public static void main(String[] args) throws IOException {
         PrepareReportsFolders();
@@ -37,10 +49,22 @@ public class Runner {
         ExecutorService executorService = Executors.newFixedThreadPool(devicesList.size());
 
         List<Future> res = new LinkedList<>();
-        for (int i = 0; i < devicesList.size(); i++) {
-            Suite suite = new Suite(devicesList.get(i), getURL());
-            res.add(executorService.submit(suite));
-            System.out.println(String.format("%-50s%-15s%-3s", devicesList.get(i), "- submitted -", (i + 1)));
+
+        if (APPIUM) {
+            System.out.println("Starting APPIUM Suites");
+            for (int i = 0; i < devicesList.size(); i++) {
+                AppiumSuite suite = new AppiumSuite(devicesList.get(i), getURL());
+                res.add(executorService.submit(suite));
+                System.out.println(String.format("%-50s%-15s%-3s", devicesList.get(i), "- submitted -", (i + 1)));
+            }
+        } else {
+            System.out.println("Starting SEETEST Suites");
+            if(!GRID) LDM = new SeeTestLocalDeviceManager("localhost",8889);
+            for (int i = 0; i < devicesList.size(); i++) {
+                SeeTestSuite suite = new SeeTestSuite(devicesList.get(i));
+                res.add(executorService.submit(suite));
+                System.out.println(String.format("%-50s%-15s%-3s", devicesList.get(i), "- submitted -", (i + 1)));
+            }
         }
 
         for (Future re : res) {
@@ -90,7 +114,7 @@ public class Runner {
             if (ALL_DEVICES) {
                 devicesList = cloudServer.getAllAvailableDevices(USED_OS.toLowerCase());
             } else {
-                devicesList.add("1115fbd4746c2f05");
+                devicesList.add("00d064b580b7e36184819a9ce668f8c9f1d2413f");
 //                devicesList.add("458f9f58d515f647b4cb3ea7cedc68ce300f2128");
             }
         } else {

@@ -51,13 +51,12 @@
             <groupId>com.experitest</groupId>
             <artifactId>appium</artifactId>
             <version>4.1.2</version>
-
         </dependency>
 
-        <!--<dependency>-->
-            <!--<groupId>com.experitest</groupId>-->
-            <!--<artifactId>seetest-client</artifactId>-->
-            <!--<version>11.0</version>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>com.experitest</groupId>
+            <artifactId>seetest-client</artifactId>
+            <version>11.2</version>
+        </dependency>
     </dependencies>
 </project>

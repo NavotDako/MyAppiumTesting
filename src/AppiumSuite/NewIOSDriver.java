@@ -1,16 +1,9 @@
-package FrameWork;
+package AppiumSuite;
 
-import AppiumSuite.Runner;
 import io.appium.java_client.ios.IOSDriver;
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.By;
 import org.openqa.selenium.Capabilities;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.SessionId;
 
-import java.io.File;
-import java.io.IOException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;

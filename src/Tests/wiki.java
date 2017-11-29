@@ -1,7 +1,5 @@
 package Tests;
 
-import io.appium.java_client.remote.AndroidMobileCapabilityType;
-import io.appium.java_client.remote.IOSMobileCapabilityType;
 import io.appium.java_client.remote.MobileBrowserType;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.By;
@@ -13,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 /**
  * Created by navot.dako on 9/12/2017.
  */
-public class wiki extends BaseTest {
+public class wiki extends BaseAppiumTest {
     public wiki(String deviceID, DesiredCapabilities generalDC, String url, int iteration) {
         super("wiki", deviceID, url, iteration);
         DesiredCapabilities dc = createCapabilities(generalDC);
@@ -44,13 +42,14 @@ public class wiki extends BaseTest {
         new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='gh-mlogo' or @id='gh-la']")));
         try {
             Thread.sleep(2000);
-            String strArray = (String) driver.executeScript("experitest:client.getAllValues(\"WEB\", \"xpath=//*[@nodeName='H3']\", \"text\")");
-            splitStringAndroid(strArray);
+           String strArray = (String) driver.executeScript("experitest:client.getAllValues(\"WEB\", \"xpath=//*[@nodeName='H3']\", \"text\")");
+         //   String[] strArray = clientDriver.getAllValues("WEB", "xpath=//*[@nodeName='H3']", "text");
+            printStringArray(strArray.split("\n"));
+
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println("@@@@@@@@@@@@@@@@@@@@@@");
-            String strArray = (String) driver.executeScript("experitest:client.getAllValues(\"WEB\", \"xpath=//*[@css='H3.s-item__title']\", \"text\")");
-            splitStringAndroid(strArray);
+
         }
         driver.findElement(By.xpath(searchBox)).sendKeys("Hello Again");
         driver.findElement(By.xpath(searchButton)).click();
@@ -65,18 +64,16 @@ public class wiki extends BaseTest {
             e.printStackTrace();
         }
         driver.findElement(By.xpath(searchBox)).sendKeys("3rd Time... Enough Already!");
-        String searchText =driver.findElement(By.xpath("//*[@name='_nkw']")).getAttribute("value");
+        String searchText = driver.findElement(By.xpath("//*[@name='_nkw']")).getAttribute("value");
         System.out.println(searchText);
         driver.findElement(By.xpath(searchButton)).click();
         new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[contains(@id,'logo')]")));
     }
 
-    public void splitStringAndroid(String str) {
-        String arr[] = str.split("\"text\":\"");
-        String s[] = arr[1].split("\\\\n");
+    public void printStringArray(String[] str) {
 
-        for (int i = 0; i < s.length; i++) {
-            System.out.println(s[i]);
+        for (int i = 0; i < str.length; i++) {
+            System.out.println(str[i]);
             System.out.println();
         }
 
@@ -84,20 +81,7 @@ public class wiki extends BaseTest {
 
     @Override
     protected void iosTest() throws Exception {
-        driver.rotate(ScreenOrientation.PORTRAIT);
-
-//        try {
-//            driver.get("http://www.apple.com");
-//            new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='ac-gn-firstfocus-small' or @id='ac-gn-firstfocus']")));
-//        } catch (Exception e) {
-//            driver.findElement(By.xpath("//*[@text='OK']")).click();
-//            driver.get("m.ebay.com");
-//        }
-//        try {
-//            Thread.sleep(20000);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
+        driver.rotate(ScreenOrientation.LANDSCAPE);
         driver.get("http://wikipedia.org");
         try {
             driver.findElement(By.id("searchInput"));
@@ -110,6 +94,7 @@ public class wiki extends BaseTest {
             } catch (Exception e2) {
             }
         }
+        driver.rotate(ScreenOrientation.PORTRAIT);
         try {
             driver.findElement(By.id("searchInput")).sendKeys("Long Run");
         } catch (Exception e) {
@@ -142,21 +127,28 @@ public class wiki extends BaseTest {
         } catch (Exception e) {
         }
 
-        String str0 = (String) driver.executeScript("experitest:client.getAllValues(\"WEB\", \"xpath=//*[@id='ca-edit']\", \"hidden\")");
-        String[] srt0Arr = splitStringIOS(str0);
-        if (srt0Arr[0].equals("false")) {
+//        String str0 = (String) driver.executeScript("experitest:client.getAllValues(\"WEB\", \"\", \"\")");
+        String strArray= (String) driver.executeScript("client:client.getAllValues(\"WEB\",\"//*[@id='ca-edit']\",\"hidden\")");
+
+//        String[] strArray = clientDriver.getAllValues("WEB", "xpath=//*[@id='ca-edit']", "hidden");
+        printStringArray(strArray.split("\n"));
+        if (strArray.split("\n")[0].equals("false")) {
             driver.findElement(By.id("ca-edit")).click();
-            driver.executeScript("client:client.swipeWhileNotFound(\"DOWN\", 250,1000, 'WEB', \"xpath=//*[@text='Sign up']\", 0, 0, 2, true)");
+//            driver.executeScript("client:client.swipeWhileNotFound(\"DOWN\", 250,1000, 'WEB', \"xpath=//*[@text='Sign up']\", 0, 0, 2, true)");
+            clientDriver.swipeWhileNotFound("DOWN", 250, 1000, "WEB", "xpath=//*[@text='Sign up']", 0, 0, 2, true);
             driver.rotate(ScreenOrientation.LANDSCAPE);
             driver.findElement(By.id("section_0")).click();
             driver.findElement(By.xpath("//*[contains(@id,'wpName')]")).sendKeys("LONG");
             driver.findElement(By.id("wpPassword2")).sendKeys("RUN");
             driver.findElement(By.id("wpRetype")).sendKeys("123456");
-            driver.executeScript("client:client.swipeWhileNotFound(\"DOWN\", 250,1000, 'WEB', \"id=wpEmail\", 0, 0, 2, true)");
+//            driver.executeScript("client:client.swipeWhileNotFound(\"DOWN\", 250,1000, 'WEB', \"id=wpEmail\", 0, 0, 2, true)");
+            clientDriver.swipeWhileNotFound("DOWN", 250, 1000, "WEB", "id=wpEmail", 0, 0, 2, true);
+
             driver.findElement(By.id("wpEmail")).sendKeys("LONG@RUN.COM");
             driver.rotate(ScreenOrientation.PORTRAIT);
             driver.rotate(ScreenOrientation.LANDSCAPE);
-            driver.executeScript("client:client.swipeWhileNotFound(\"DOWN\", 150,1000, 'WEB', \"xpath=//*[@id='wpCreateaccount' and @onScreen='true']\", 0, 0, 2, true)");
+//            driver.executeScript("client:client.swipeWhileNotFound(\"DOWN\", 150,1000, 'WEB', \"xpath=//*[@id='wpCreateaccount' and @onScreen='true']\", 0, 0, 2, true)");
+            clientDriver.swipeWhileNotFound("DOWN", 150, 1000, "WEB", "xpath=//*[@id='wpCreateaccount' and @onScreen='true']", 0, 0, 2, true);
             driver.context("NATIVE_APP_NON_INSTRUMENTED");
             try {
                 driver.findElement(By.xpath("//*[@name='Not Now']")).click();
@@ -171,7 +163,8 @@ public class wiki extends BaseTest {
                 System.out.println("No error - trying to insert text and click again");
                 try {
                     driver.getKeyboard().sendKeys("SOME TEXT");
-                    driver.executeScript("client:client.swipeWhileNotFound(\"DOWN\", 150,1000, 'WEB', \"xpath=//*[@id='wpCreateaccount' and @onScreen='true']\", 0, 0, 2, true)");
+//                    driver.executeScript("client:client.swipeWhileNotFound(\"DOWN\", 150,1000, 'WEB', \"xpath=//*[@id='wpCreateaccount' and @onScreen='true']\", 0, 0, 2, true)");
+                    clientDriver.swipeWhileNotFound("DOWN", 150, 1000, "WEB", "xpath=//*[@id='wpCreateaccount' and @onScreen='true']", 0, 0, 2, true);
                     driver.findElement(By.xpath("//*[@class='error']"));
 
                 } catch (Exception ee) {
@@ -189,7 +182,7 @@ public class wiki extends BaseTest {
                 }
                 driver.findElement(By.id("mw-mf-main-menu-button")).click();
                 String b = driver.findElement(By.xpath("//*[@id='countryTextField']")).getText();
-                System.out.println("b - "+b);
+                System.out.println("b - " + b);
                 String str2 = driver.getTitle();
                 if (str2.contains("HOME")) {
                     driver.findElement(By.xpath("xpath=//*[@text='Home' and @nodeName='A']")).click();

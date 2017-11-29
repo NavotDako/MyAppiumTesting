@@ -1,10 +1,8 @@
 package FrameWork;
 
-import AppiumSuite.Runner;
 import io.appium.java_client.AppiumDriver;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
-import org.openqa.selenium.WebDriver;
 
 import java.io.*;
 import java.text.SimpleDateFormat;
@@ -48,7 +46,7 @@ public class Utils {
             if (status) {
                 writer.write(String.format("%-5s%-10s%-50s%-15s%-20s%-20s%-100s\n", Runner.index + ".", sdf.format(new Date(System.currentTimeMillis())), deviceID, "PASS    " + iteration, testName, (time / 1000) + "s", reportUrl));
             } else {
-                writer.write(String.format("%-5s%-10s%-50s%-15s%-20s%-20s%-100s\n", Runner.index + ".", sdf.format(new Date(System.currentTimeMillis())), deviceID, "*FAIL*  " + iteration, testName, (time / 1000) + "s", reportUrl));
+                writer.write(String.format("%-5s%-10s%-50s%-15s%-20s%-20s%-100s\n", Runner.index + ".", sdf.format(new Date(System.currentTimeMillis())), deviceID, "*FAIL*  " + iteration, testName, (time / 1000) + "s", reportUrl.replace("\n"," - ")));
                 //  if (Runner.GRID) writer.write(String.format("%-30s%-40s%-20s%-100s\n\n","Report URL - ",deviceID, testName, reportUrl));
 
                 if (Runner.PRINT_ERROR) {

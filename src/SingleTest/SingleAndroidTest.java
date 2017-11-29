@@ -1,31 +1,26 @@
 package SingleTest;//package <set your test package>;
 
 import FrameWork.CloudServer;
-import FrameWork.NewAndroidDriver;
-import FrameWork.NewIOSDriver;
+import AppiumSuite.NewAndroidDriver;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.remote.AndroidMobileCapabilityType;
-import io.appium.java_client.remote.IOSMobileCapabilityType;
-import io.appium.java_client.ios.IOSDriver;
-import io.appium.java_client.remote.MobileBrowserType;
 import io.appium.java_client.remote.MobileCapabilityType;
-import org.openqa.selenium.*;
+import org.openqa.selenium.html5.Location;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.junit.*;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.IOException;
 import java.net.URL;
 import java.net.MalformedURLException;
-import java.util.concurrent.TimeUnit;
 
 public class SingleAndroidTest {
 
     protected AppiumDriver driver = null;
     CloudServer cloudServer;
     private boolean GRID = true;
+    private String reportDirectory = "reports";
+    private String reportFormat = "xml";
+    private String testName = "Untitled";
 
     @Before
     public void setUp() throws IOException {
@@ -41,11 +36,15 @@ public class SingleAndroidTest {
             dc.setCapability("password", cloudServer.PASS);
         }
 //        dc.setCapability(MobileCapabilityType.PLATFORM_NAME, Platform.ANDROID);
-//        dc.setCapability(MobileCapabilityType.APP, "http://192.168.2.72:8181/AndroidApps/eriban111k.apk");
+        dc.setCapability("reportDirectory", reportDirectory);
+        dc.setCapability("reportFormat", reportFormat);
+        dc.setCapability("testName", testName);
+
+//        dc.setCapability(MobileCapabilityType.APP, "http://192.168.2.72:8181/AndroidApps/eribank.apk");
 //        dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.experitest.ExperiBank");
 //        dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".LoginActivity");
         dc.setCapability(MobileCapabilityType.UDID, udid);
-        dc.setBrowserName(MobileBrowserType.CHROMIUM);
+//        dc.setBrowserName(MobileBrowserType.CHROMIUM);
 
         return dc;
     }
@@ -59,6 +58,13 @@ public class SingleAndroidTest {
         AndroidDriver driver;
         if (GRID) {
             driver = new NewAndroidDriver(new URL(cloudServer.gridURL), dc);
+//            driver.executeScript("client:client.setLocation('-3.083852476163502','37.330864026562494');");
+//            driver.executeScript("client:client.")
+//            Location location = driver.location();
+//            System.out.println(location);
+            driver.setLocation(new Location(0, 0, 0));
+//            location = driver.location();
+//            System.out.println(location);
         } else {
             driver = new NewAndroidDriver(new URL("http://localhost:4723/wd/hub"), dc);
         }

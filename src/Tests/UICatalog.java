@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import io.appium.java_client.TouchAction;
 
-public class UICatalog extends BaseTest {
+public class UICatalog extends BaseAppiumTest {
 
     UICatalog(String testName, String deviceID, String url,int iteration) {
         super(testName, deviceID, url, iteration);

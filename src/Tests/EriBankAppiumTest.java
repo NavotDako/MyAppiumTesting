@@ -1,7 +1,5 @@
 package Tests;
 
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.IOSMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
@@ -13,12 +11,11 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-public class EriBankTest extends BaseTest {
+public class EriBankAppiumTest extends BaseAppiumTest {
 
-    public EriBankTest(String deviceID, DesiredCapabilities generalDC, String url, int iteration) {
+    public EriBankAppiumTest(String deviceID, DesiredCapabilities generalDC, String url, int iteration) {
         super("EriBank", deviceID, url, iteration);
         DesiredCapabilities dc = createCapabilities(generalDC);
         if (init(dc)) {

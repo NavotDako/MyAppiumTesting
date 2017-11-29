@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="appium-extension-11.3">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/appium-extension-11.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

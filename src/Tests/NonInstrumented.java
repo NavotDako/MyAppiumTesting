@@ -17,7 +17,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by khaled.abbas on 5/23/2017.
  */
-public class NonInstrumented extends BaseTest {
+public class NonInstrumented extends BaseAppiumTest {
 
 
     public NonInstrumented(String deviceID, DesiredCapabilities generalDC, String url,int iteration) {
@@ -107,7 +107,8 @@ public class NonInstrumented extends BaseTest {
     @Override
     protected void iosTest() throws Exception {
         String countriesString = "//*[(@knownSuperClass='UILabel' or @knownSuperClass='UICollectionViewCell' or @knownSuperClass='UIAccessibilityElement') and (not(contains(@text,'Today')) and not(contains(@text,':')) and not(contains(@text,'Add')))][1]";
-        driver.executeScript("client:client.sendText(\"{HOME}\")");
+//        driver.executeScript("client:client.sendText(\"{HOME}\")");
+        clientDriver.deviceAction("HOME");
         driver.findElement(By.xpath("//*[@accessibilityLabel='Clock']")).click();
         driver.findElement(By.xpath("//*[@text='World Clock' and (@knownSuperClass='UITabBarButton' or @class='UIAButton')]")).click();
         try {
@@ -121,12 +122,15 @@ public class NonInstrumented extends BaseTest {
         driver.getKeyboard().sendKeys("LONDON");
         driver.findElement(By.xpath("//*[@text='London, England']")).click();
         deleteCountry("London");
-        driver.executeScript("client:client.sendText(\"{HOME}\")");
+//        driver.executeScript("client:client.sendText(\"{HOME}\")");
+        clientDriver.deviceAction("HOME");
+
 
     }
 
     private void deleteCountry(String countryStr) {
-        driver.executeScript("client:client.getVisualDump(\"native\")");
+//        driver.executeScript("client:client.getVisualDump(\"native\")");
+        clientDriver.getVisualDump("native");
         String deleteElement = "//*[contains(@text,'Delete " + countryStr + "')]  | //*[contains(@text,'London')]/*/*[@text='Remove clock']";
 
         driver.findElement(By.xpath("//*[@text='Edit']")).click();
